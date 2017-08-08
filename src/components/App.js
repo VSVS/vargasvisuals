@@ -59,27 +59,27 @@ class App extends React.Component {
       <Router>
 
           <div>
-            <Button onClick={this.toggleVisibility}>Toggle Visibility</Button>
+            <Button className='main-menu' onClick={this.toggleVisibility}><Icon name='ellipsis vertical' /></Button>
             <Sidebar.Pushable as={Segment}>
-              <Sidebar as={Menu} animation='scale down' direction='bottom' visible={visible} inverted>
+              <Sidebar as={Menu} animation='scale down' direction='top' visible={visible} inverted>
                 <Menu.Item as={Link} to='/' name='home' >
                   <Icon name='home' />
-                  Im Home
+                  Home
                 </Menu.Item>
                 <Menu.Item as={Link} to='/bio' name='gamepad'>
-                  <Icon name='gamepad' />
+                  <Icon name='user circle' />
                   Bio
                 </Menu.Item>
                 <Menu.Item as={Link} to='/projects' name='camera'>
-                  <Icon name='camera' />
+                  <Icon name='grid layout' />
                   Projects
                 </Menu.Item>
                 <Menu.Item as={Link} to='/resume' name='resume'>
-                  <Icon name='camera' />
+                  <Icon name='file text outline' />
                   Resume
                 </Menu.Item>
                 <Menu.Item as={Link} to='/hire' name='camera'>
-                  <Icon name='camera' />
+                  <Icon name='thumbs outline up' />
                   Hire Me
                 </Menu.Item>
               </Sidebar>
