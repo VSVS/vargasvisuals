@@ -1,0 +1,27 @@
+{
+        "bio":[{
+            
+                "title" :"Gradiation",
+                "year":"2010"
+            },
+            {
+                "title":"January Hired as print designer at DUGGAL",
+                "year": "2011"
+            },
+            {
+                "title":"Started Web design internship at Starchefs",
+                "year": "2012"
+            },
+            {
+                "title":"Hired as prepress tech at Visual Graphic Solutions",
+                "year": "2013"
+            },
+            {
+                "title":"Joined Developer Bootcamp",
+                "year": "2014",
+                "month":"January"
+            }
+        ]
+        
+    
+}

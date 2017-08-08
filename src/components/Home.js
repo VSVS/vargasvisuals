@@ -1,17 +1,21 @@
-import React, { Component } from 'react';
-import '../css/Home.css';
+import React, { Component } from 'react'
+import {Container} from 'semantic-ui-react';
+class Home extends Component {
 
-const Home = () => (
-  <div className="row">
-    <div className="col s12">
-      <div className="hero">
+  render() {
+    const style ={
+      border: "solid 3px blue"
+    }
+    return (
+      
+        <div>
+          <h5>Robert Vargas</h5>
+          <h1>UX Developer</h1>
+          <h5>Growth Marketer</h5>
+        </div>
+      
+    )
+  }
+}
 
-
-
-      </div>
-    </div>
-  </div>
-)
-
-
-export default Home;
+export default Home
