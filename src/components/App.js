@@ -44,7 +44,11 @@ class App extends React.Component {
       this.setState({ visible: false })
     }
   }
-  
+  responsiveMenu(){
+    // update state for the screen size 
+    // use props to use this state to change
+    // the animation prop for <Sidebar>
+  }
   toggleVisibility(){
     this.setState({ visible: !this.state.visible })
     console.log('clicked');
@@ -58,34 +62,21 @@ class App extends React.Component {
       
       <Router>
 
-
-
-
           <div>
             <Button className='main-menu' onClick={this.toggleVisibility}><Icon name='ellipsis vertical' /></Button>
+            {/* Main Body of React Site */}
             <Sidebar.Pushable as={Segment}>
+              
               <Sidebar as={Menu} animation='push' width='thin' visible={visible} icon='labeled' vertical inverted>
-                <Menu.Item as={Link} to='/' name='home' >
-                  <Icon name='home' />
-                  Home
-                </Menu.Item>
-                <Menu.Item as={Link} to='/bio' name='gamepad'>
-                  <Icon name='user circle' />
-                  Bio
-                </Menu.Item>
-                <Menu.Item as={Link} to='/projects' name='camera'>
-                  <Icon name='grid layout' />
-                  Projects
-                </Menu.Item>
-                <Menu.Item as={Link} to='/resume' name='resume'>
-                  <Icon name='file text outline' />
-                  Resume
-                </Menu.Item>
-                <Menu.Item as={Link} to='/hire' name='camera'>
-                  <Icon name='thumbs outline up' />
-                  Hire Me
-                </Menu.Item>
+                
+                <Menu.Item as={Link} to='/' name='home' ><Icon name='home' />Home</Menu.Item>
+                <Menu.Item as={Link} to='/bio' name='gamepad'><Icon name='user circle' />Bio</Menu.Item>
+                <Menu.Item as={Link} to='/projects' name='camera'><Icon name='grid layout' />Projects</Menu.Item>
+                <Menu.Item as={Link} to='/resume' name='resume'><Icon name='file text outline' />Resume</Menu.Item>
+                <Menu.Item as={Link} to='/hire' name='camera'><Icon name='thumbs outline up' />Hire Me</Menu.Item>
+
               </Sidebar>
+
               <Sidebar.Pusher>
                 <Segment basic>
                   <Container className="">
@@ -97,6 +88,7 @@ class App extends React.Component {
                   </Container>
                 </Segment>
               </Sidebar.Pusher>
+              
             </Sidebar.Pushable>
           </div>
 

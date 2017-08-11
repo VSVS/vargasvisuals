@@ -2,9 +2,19 @@ body{
   .container{
     min-height: 50vh;
     .hero{
-      background:turquoise;
-      height:50vh;
-      width:100%;
+      height: 75vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1{
+          font-size: 7em;
+      }
+    }
+    .skills{
+      height:500px;
+      padding: 20px;
+      background:#fff;
     }
   }
 }

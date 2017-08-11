@@ -4,10 +4,14 @@ body{
         
     }
     .ui.segment.pushable{
-        position: relative;
-        top: 40px;
         border: 0px;
         box-shadow: none;
+        margin-top:0px;
+        height:100vh;
+        background:#333;
+    }
+    .ui.basic.segment{
+        padding-top: 50px;
     }
     button.ui.main-menu{
         position: fixed;
