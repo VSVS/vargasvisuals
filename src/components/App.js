@@ -58,10 +58,13 @@ class App extends React.Component {
       
       <Router>
 
+
+
+
           <div>
             <Button className='main-menu' onClick={this.toggleVisibility}><Icon name='ellipsis vertical' /></Button>
             <Sidebar.Pushable as={Segment}>
-              <Sidebar as={Menu} animation='scale down' direction='top' visible={visible} inverted>
+              <Sidebar as={Menu} animation='push' width='thin' visible={visible} icon='labeled' vertical inverted>
                 <Menu.Item as={Link} to='/' name='home' >
                   <Icon name='home' />
                   Home
