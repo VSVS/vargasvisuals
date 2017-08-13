@@ -7,14 +7,37 @@ body{
       display: flex;
       flex-direction: column;
       justify-content: center;
-      h1{
-          font-size: 7em;
+      h5{
+          font-size: 4em;
       }
+        
     }
     .skills{
       height:500px;
       padding: 20px;
       background:#fff;
+      h2{
+        font-family:$Nexa-font;
+      }
+      ul{
+        padding-left:0px;
+        li{
+          list-style: none;
+          height: 55px;
+          border-bottom: solid 1px rgba(0,0,0,0.1 );
+          display: flex;
+          align-items: center;
+          margin-bottom: 3px;
+          span{
+            font-size:20px;
+            font-weight: bold;
+          }
+          img{
+            width:50px;
+            margin-right: 5px;
+          }
+        }
+      }
     }
   }
 }

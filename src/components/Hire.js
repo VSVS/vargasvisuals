@@ -42,7 +42,7 @@ const Hire = () => (
 
         <div className="input-field col s12 m6 offset-m3">
           <i className="material-icons prefix">message</i>
-         <textarea id="message" class="materialize-textarea"></textarea>
+         <textarea id="message" className="materialize-textarea"></textarea>
           <label for="textarea1">How can I help you?</label>
         
         </div>

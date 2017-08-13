@@ -1,0 +1,57 @@
+.path-wrap{
+  position:relative;
+}
+
+.path {
+    position:absolute;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: flash 2.5s ease-in-out 0.2s;
+    stroke: #fff;
+    fill:#fff;
+
+    
+}
+
+@keyframes flash {
+    0% {
+        stroke-dashoffset: 1000;
+        fill: #348AC7;  
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+        
+    }
+    10% {
+        fill: rgba(0, 0, 0, 1);
+    }
+    20% {
+        fill: rgba(0, 0, 0, 0.2);
+    }
+    30% {}
+    40% {
+        fill: rgba(0, 0, 0, 1);
+    }
+    50% {
+        fill: rgba(0, 0, 0, 0.2);
+    }
+    60% {
+        fill: rgba(0, 0, 0, 1);
+    }
+    70% {
+        fill: rgba(0, 0, 0, 0.2);
+    }
+    80% {
+        fill: rgba(0, 0, 0, 1);
+    }
+    90% {
+        fill: rgba(0, 0, 0, 0.9);
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: #fff;
+        
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
