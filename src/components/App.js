@@ -16,7 +16,10 @@ import { Sidebar, Segment, Button, Menu, Image, Icon, Header, Container } from '
 class App extends React.Component {
   constructor(props){
     super(props)
-    this.state = { visible: false }
+    this.state = { 
+      visible: false, 
+      menuIcon: 'ellipsis vertical icon'
+    }
     this.toggleVisibility = this.toggleVisibility.bind(this)
     this.handleClick = this.handleClick.bind(this)
     this.handleKeyPress = this.handleKeyPress(this)
@@ -50,7 +53,17 @@ class App extends React.Component {
     // the animation prop for <Sidebar>
   }
   toggleVisibility(){
-    this.setState({ visible: !this.state.visible })
+    this.setState({ 
+      
+      visible: !this.state.visible,
+    });
+
+    if(this.state.menuIcon == 'ellipsis vertical icon' ){
+      this.setState({ menuIcon: 'window close outline' })
+    } else {
+      this.setState({ menuIcon: 'ellipsis vertical icon' })
+    }
+
     console.log('clicked');
   }
   render(){
@@ -63,12 +76,12 @@ class App extends React.Component {
       <Router>
           <div>
 
-            <Button className='main-menu' onClick={this.toggleVisibility}><Icon name='ellipsis vertical' /></Button>
+            <Button className='main-menu' onClick={this.toggleVisibility}><Icon name={this.state.menuIcon} /></Button>
 
             {/* Main Body */}
             <Sidebar.Pushable as={Segment}>
               
-              <Sidebar as={Menu} animation='overlay' width='thin' visible={visible} icon='labeled' vertical inverted>
+              <Sidebar as={Menu} animation='overlay' direction='right' width='thin' visible={visible} icon='labeled' vertical inverted>
                 
                 <Menu.Item as={Link} to='/' name='home' ><Icon name='home' />Home</Menu.Item>
                 <Menu.Item as={Link} to='/bio' name='bio'><Icon name='user circle' />Bio</Menu.Item>

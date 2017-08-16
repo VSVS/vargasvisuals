@@ -3,6 +3,10 @@ body{
         background:#222;
         
     }
+    .ui.button:focus {
+        background-color: rgba(255, 255, 255, 0.19);
+        color: #fff;
+    }
     .ui.segment.pushable{
         border: 0px;
         box-shadow: none;
@@ -30,6 +34,10 @@ body{
         text-shadow: 0px 0px 9px;
         border: 0px;
         margin-right: -20px;
+    }
+    p{
+        font-family: $Proxima-Nova-font;
+        font-size: 21px;
     }
 
 }
