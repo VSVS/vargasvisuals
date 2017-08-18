@@ -102,6 +102,7 @@ class App extends React.Component {
                       <Route path="/resume" component={Resume}/>
                       <Route path="/hire" component={Hire}/>
                     </Container>
+                    <footer>Footer</footer>
                   </Segment>
                 </Sidebar.Pusher>
               </Sidebar.Pushable>
