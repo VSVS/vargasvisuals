@@ -80,7 +80,15 @@ class App extends React.Component {
   render(){
     const { visible } = this.state
     const style = {
-      height: '100vh'
+      height: '100vh',
+      sidebar: {
+        width:'20px',
+        height:'100vh',
+        position:'fixed',
+        top:'0px',
+        right:'-1px',
+        background:'#333'
+      }
     }
     return(
       
@@ -92,7 +100,7 @@ class App extends React.Component {
             {/* Main Body */}
             <Sidebar.Pushable as={Segment}>
               
-              <Sidebar as={Menu} animation='overlay' direction='right' width='thin' visible={visible} icon='labeled' vertical inverted>
+              <Sidebar as={Menu} onMouseOut={this.toggleVisibility} animation='overlay' direction='right' width='thin' visible={visible} icon='labeled' vertical inverted>
                 
                 <Menu.Item as={Link} to='/' name='home' ><Icon name='home' />Home</Menu.Item>
                 <Menu.Item as={Link} to='/bio' name='bio'><Icon name='user circle' />Bio</Menu.Item>
@@ -112,8 +120,9 @@ class App extends React.Component {
                       <Route path="/projects" component={Projects}/>
                       <Route path="/resume" component={Resume}/>
                       <Route path="/hire" component={Hire}/>
+                      <div style={style.sidebar} onMouseOver={this.toggleVisibility}></div>
                     </Container>
-                    <footer onMouseOver={this.onMouseEnterHandler} onMouseOut={this.onMouseLeaveHandler}>hover over me!</footer>
+                    <footer></footer>
                   </Segment>
                 </Sidebar.Pusher>
               </Sidebar.Pushable>
