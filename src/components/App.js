@@ -18,11 +18,14 @@ class App extends React.Component {
     super(props)
     this.state = { 
       visible: false, 
-      menuIcon: 'ellipsis vertical icon'
+      menuIcon: 'ellipsis vertical icon',
+      hover: false
     }
     this.toggleVisibility = this.toggleVisibility.bind(this)
     this.handleClick = this.handleClick.bind(this)
-    this.handleKeyPress = this.handleKeyPress(this)
+    this.handleKeyPress = this.handleKeyPress.bind(this)
+    this.onMouseEnterHandler = this.onMouseEnterHandler.bind(this)
+    this.onMouseLeaveHandler = this.onMouseLeaveHandler.bind(this)
   }
 
   componentWillUpdate(nextProps, nextState) {
@@ -51,6 +54,14 @@ class App extends React.Component {
     // update state for the screen size 
     // use props to use this state to change
     // the animation prop for <Sidebar>
+  }
+  onMouseEnterHandler() {
+    this.setState({hover: true});
+    console.log('enter'); 
+  }
+  onMouseLeaveHandler(){
+    this.setState({hover: false});
+    console.log('leave');
   }
   toggleVisibility(){
     this.setState({ 
@@ -102,7 +113,7 @@ class App extends React.Component {
                       <Route path="/resume" component={Resume}/>
                       <Route path="/hire" component={Hire}/>
                     </Container>
-                    <footer>Footer</footer>
+                    <footer onMouseOver={this.onMouseEnterHandler} onMouseOut={this.onMouseLeaveHandler}>hover over me!</footer>
                   </Segment>
                 </Sidebar.Pusher>
               </Sidebar.Pushable>
