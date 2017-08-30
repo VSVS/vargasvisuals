@@ -26,6 +26,7 @@ class App extends React.Component {
     this.handleKeyPress = this.handleKeyPress.bind(this)
     this.onMouseEnterHandler = this.onMouseEnterHandler.bind(this)
     this.onMouseLeaveHandler = this.onMouseLeaveHandler.bind(this)
+    
   }
 
   componentWillUpdate(nextProps, nextState) {
@@ -63,7 +64,9 @@ class App extends React.Component {
     this.setState({hover: false});
     console.log('leave');
   }
+
   toggleVisibility(){
+    
     this.setState({ 
       
       visible: !this.state.visible,
@@ -77,12 +80,13 @@ class App extends React.Component {
 
     console.log('clicked');
   }
+
   render(){
     const { visible } = this.state
     const style = {
       height: '100vh',
       sidebar: {
-        width:'20px',
+        width:'30px',
         height:'100vh',
         position:'fixed',
         top:'0px',
@@ -97,10 +101,10 @@ class App extends React.Component {
 
             <Button className='main-menu' onClick={this.toggleVisibility}><Icon name={this.state.menuIcon} /></Button>
 
-            {/* Main Body */}
-            <Sidebar.Pushable as={Segment}>
+          
+            
               
-              <Sidebar as={Menu} onMouseOut={this.toggleVisibility} animation='overlay' direction='right' width='thin' visible={visible} icon='labeled' vertical inverted>
+              <Sidebar as={Menu} onMouseLeave={this.toggleVisibility} animation='overlay' direction='right' width='thin' visible={visible} icon='labeled' vertical inverted>
                 
                 <Menu.Item as={Link} to='/' name='home' ><Icon name='home' />Home</Menu.Item>
                 <Menu.Item as={Link} to='/bio' name='bio'><Icon name='user circle' />Bio</Menu.Item>
@@ -110,26 +114,27 @@ class App extends React.Component {
 
               </Sidebar>
               
-              {/* Left Sidebar Menu */}
-              <Sidebar.Pushable as={Segment}>
-                <Sidebar.Pusher>
-                  <Segment basic>
-                    <Container className="">
+              {/* Right Sidebar Menu */}
+              
+                <Sidebar.Pusher > 
+                  <Sidebar.Pushable as={Segment}>
+                    <Container>
                       <Route exact path="/" component={Home}/>
                       <Route path="/bio" component={Bio}/>
                       <Route path="/projects" component={Projects}/>
                       <Route path="/resume" component={Resume}/>
                       <Route path="/hire" component={Hire}/>
-                      <div style={style.sidebar} onMouseOver={this.toggleVisibility}></div>
+                      
                     </Container>
-                    <footer></footer>
-                  </Segment>
+                    <footer></footer>  
+                  </Sidebar.Pushable>    
                 </Sidebar.Pusher>
-              </Sidebar.Pushable>
+              
 
 
-            </Sidebar.Pushable>
-
+            
+            <div style={style.sidebar} onMouseOver={this.toggleVisibility}></div>
+                    
           </div>
       </Router>
     )

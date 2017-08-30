@@ -13,7 +13,9 @@ class Home extends Component {
       const path = this.path;
       const length = path.getTotalLength();
       console.log(length);
+      window.scrollTo(0, 0)
   }
+
 
   render() {
     const style ={
