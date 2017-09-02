@@ -11,7 +11,8 @@ class TimeLine extends React.Component{
     return(
         <div>
 
-            {/*Timeline*/}
+          {/*Timeline*/}
+          <div className="timeline">
             <Grid columns={2} divided>
 
 
@@ -21,11 +22,8 @@ class TimeLine extends React.Component{
             <Grid.Row>
               <Grid.Column mobile="3" computer="3">
                 <h1>2010</h1>
-                {/* <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 387">
-                  <path class="st0" d="M17.5 42.6h14.9v299.3H17.5z"/>
-                  <circle class="st1" cx="25.1" cy="24.4" r="19.4"/>
-                  <circle class="st1" cx="25.3" cy="361.3" r="19.4"/>
-                </svg> */}
+                <span className="connection"></span>
+                <span className="connection end"></span>
               </Grid.Column>
               <Grid.Column mobile="13" computer="13">
                 <h2>Graduation</h2>
@@ -39,11 +37,8 @@ class TimeLine extends React.Component{
              <Grid.Row>
               <Grid.Column mobile="3" computer="3">
                 <h1>2011</h1>
-                {/* <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 387">
-                  <path class="st0" d="M17.5 42.6h14.9v299.3H17.5z"/>
-                  <circle class="st1" cx="25.1" cy="24.4" r="19.4"/>
-                  <circle class="st1" cx="25.3" cy="361.3" r="19.4"/>
-                </svg> */}
+                <span className="connection"></span>
+                <span className="connection end"></span>
               </Grid.Column>
               <Grid.Column mobile="13" computer="13">
                 <h2>Hired as Print Designer at Duggal</h2>
@@ -59,11 +54,8 @@ class TimeLine extends React.Component{
              <Grid.Row>
               <Grid.Column mobile="3" computer="3">
                 <h1>2012</h1>
-                {/* <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 387">
-                  <path class="st0" d="M17.5 42.6h14.9v299.3H17.5z"/>
-                  <circle class="st1" cx="25.1" cy="24.4" r="19.4"/>
-                  <circle class="st1" cx="25.3" cy="361.3" r="19.4"/>
-                </svg> */}
+                <span className="connection"></span>
+                <span className="connection end"></span>
               </Grid.Column>
               <Grid.Column mobile="13" computer="13">
                 <h2>Started web design internship at StarChefs</h2>
@@ -78,11 +70,8 @@ class TimeLine extends React.Component{
               <Grid.Row>
               <Grid.Column mobile="3" computer="3">
                 <h1>2013</h1>
-                {/* <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 387">
-                  <path class="st0" d="M17.5 42.6h14.9v299.3H17.5z"/>
-                  <circle class="st1" cx="25.1" cy="24.4" r="19.4"/>
-                  <circle class="st1" cx="25.3" cy="361.3" r="19.4"/>
-                </svg> */}
+                <span className="connection"></span>
+                <span className="connection end"></span>
               </Grid.Column>
               <Grid.Column mobile="13" computer="13">
                 <h2>Prepress technician at VGS</h2>
@@ -95,11 +84,8 @@ class TimeLine extends React.Component{
            <Grid.Row>
               <Grid.Column mobile="3" computer="3">
                 <h1>2014</h1>
-                {/* <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 387">
-                  <path class="st0" d="M17.5 42.6h14.9v299.3H17.5z"/>
-                  <circle class="st1" cx="25.1" cy="24.4" r="19.4"/>
-                  <circle class="st1" cx="25.3" cy="361.3" r="19.4"/>
-                </svg> */}
+                <span className="connection"></span>
+                <span className="connection end"></span>
               </Grid.Column>
               <Grid.Column mobile="13" computer="13">
                 <div>
@@ -125,11 +111,8 @@ class TimeLine extends React.Component{
             <Grid.Row>
               <Grid.Column mobile="3" computer="3">
                 <h1>2015</h1>
-                {/* <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 387">
-                  <path class="st0" d="M17.5 42.6h14.9v299.3H17.5z"/>
-                  <circle class="st1" cx="25.1" cy="24.4" r="19.4"/>
-                  <circle class="st1" cx="25.3" cy="361.3" r="19.4"/>
-                </svg> */}
+                <span className="connection"></span>
+                <span className="connection end"></span>
               </Grid.Column>
               <Grid.Column mobile="13" computer="13">
                 <h2>FLEX</h2>
@@ -143,11 +126,7 @@ class TimeLine extends React.Component{
             <Grid.Row>
               <Grid.Column mobile="3" computer="3">
                 <h1>2017</h1>
-                {/* <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 387">
-                  <path class="st0" d="M17.5 42.6h14.9v299.3H17.5z"/>
-                  <circle class="st1" cx="25.1" cy="24.4" r="19.4"/>
-                  <circle class="st1" cx="25.3" cy="361.3" r="19.4"/>
-                </svg> */}
+                <span className="connection"></span>
               </Grid.Column>
               <Grid.Column mobile="13" computer="13">
                 <h2>Code in the Dark Hackathon</h2>
@@ -158,7 +137,7 @@ class TimeLine extends React.Component{
 
 
             </Grid>
-         
+         </div>
 
       </div>
     );

@@ -71,16 +71,17 @@ class Bio extends React.Component{
         <div>
 
           <div id="bio">
-
-            <div className="skills">
-              <h1>Code Skills</h1>
-              <div className="tab-wrapper">
-                <Tab panes={panes} />
+            <Container>
+              <div className="skills">
+                <h1>Code Skills</h1>
+                <div className="tab-wrapper">
+                  <Tab panes={panes} />
+                </div>
               </div>
+              <TimeLine />
+              </Container>
             </div>
-            <TimeLine />
-          </div>
-
+          
       </div>
     );
   }

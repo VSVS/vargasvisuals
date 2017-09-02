@@ -31,7 +31,7 @@ class Home extends Component {
 
 
         <div className="hero">
-          
+          <Container>
           <h5>Robert Vargas</h5>
     
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 248">
@@ -46,11 +46,12 @@ class Home extends Component {
 
 
           <h5>Growth Marketer</h5>
+          </Container>
         </div>
 
 
         <div className="intro">
-         
+         <Container>
           <Grid colums={1}>
           
             <Grid.Row>
@@ -61,15 +62,20 @@ class Home extends Component {
                     I created this site to share my experience with the world as well as fellow developers. If you have any questions don't hesitate to
                       <Menu.Item className="link" as={Link} to='/hire' name='hire'> reach out</Menu.Item>
                 </p>
-                <p>
-                  <Button as={Link} to='/bio'>Read Bio</Button>
-                  <Button as={Link} to='/projects'>View Projects</Button>
-                </p>
+               
+                <Grid columns={2}>
+                  <Grid.Column >
+                    <Button floated='right' as={Link} to='/bio'>Read Bio</Button>
+                    </Grid.Column>
+                  <Grid.Column >
+                    <Button floated='left' as={Link} to='/projects'>View Projects</Button>
+                  </Grid.Column>
+                </Grid>
               </Grid.Column>
             </Grid.Row>
             
           </Grid>
-
+        </Container>
         </div>
         
       </div>

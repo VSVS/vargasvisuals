@@ -1,8 +1,44 @@
 #bio{
     margin-top: 20px;
-    .row{
-        margin-bottom: 0px;
+    
+    .timeline{
+        .connection{
+                border-radius: 50%;
+                border: solid 5px #fff;
+                width: 1.6rem;
+                height: 1.6rem;
+                display: inline-block;
+                position: relative;
+                top: -13px;
+                right: -24px;
+            
+        }
+        .connection.end{
+            position: absolute;
+            top: 100% !important;
+            left: 38px;
+        }
+        .row{
+            margin-bottom: 0px;
+        }
+        .row:before{
+        
+            display: block;
+            content: ' ';
+            position: absolute;
+            top: 69px;
+            left: 47px;
+            border-left: 4px solid #fff;
+            width: .2rem;
+            height: calc(100% - 79px);
+            z-index: 700;
+
+        }
+        div.ui.column{
+            overflow: hidden;
+        }
     }
+
     div.col.s3.m3{
         border-left: solid 5px;
         height:25vh;

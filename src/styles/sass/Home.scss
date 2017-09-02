@@ -1,8 +1,8 @@
 body{
-  .container{
     min-height: 50vh;
     .hero{
       height: 75vh;
+       margin-top: 20px;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -11,6 +11,10 @@ body{
           font-size: 4em;
       }
         
+    }
+    .intro{
+      background: #333;
+      color:#fff;
     }
     .skills{
       height:500px;
@@ -40,4 +44,3 @@ body{
       }
     }
   }
-}

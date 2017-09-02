@@ -4,9 +4,9 @@ body{
         background:#222;
         
     }
-    .ui.button:focus {
-        background-color: rgba(255, 255, 255, 0.19);
-        color: #fff;
+    .ui.button:hover,.ui.button:focus{
+        background: rgba(0,0,0,0);
+        color:#03A9F4;
     }
     .ui.segment.pushable{
         border: 0px;

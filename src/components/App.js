@@ -51,11 +51,6 @@ class App extends React.Component {
       this.setState({ visible: false })
     }
   }
-  responsiveMenu(){
-    // update state for the screen size 
-    // use props to use this state to change
-    // the animation prop for <Sidebar>
-  }
   onMouseEnterHandler() {
     this.setState({hover: true});
     console.log('enter'); 
@@ -73,7 +68,7 @@ class App extends React.Component {
     });
 
     if(this.state.menuIcon == 'ellipsis vertical icon' ){
-      this.setState({ menuIcon: 'window close outline' })
+      this.setState({ menuIcon: 'remove' })
     } else {
       this.setState({ menuIcon: 'ellipsis vertical icon' })
     }
@@ -118,14 +113,14 @@ class App extends React.Component {
               
                 <Sidebar.Pusher > 
                   <Sidebar.Pushable as={Segment}>
-                    <Container>
+                    
                       <Route exact path="/" component={Home}/>
                       <Route path="/bio" component={Bio}/>
                       <Route path="/projects" component={Projects}/>
                       <Route path="/resume" component={Resume}/>
                       <Route path="/hire" component={Hire}/>
                       
-                    </Container>
+                    
                     <footer></footer>  
                   </Sidebar.Pushable>    
                 </Sidebar.Pusher>

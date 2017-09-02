@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import TransitionGroup from 'react-addons-css-transition-group';
+
 
 class JobSharks extends React.Component{
     constructor(props){
@@ -19,11 +21,20 @@ class JobSharks extends React.Component{
     render(){
         return(
             <div>
+                  <TransitionGroup
+                        transitionName="fade"
+                        transitionEnterTimeout={500}
+                        transitionLeaveTimeout={500}
+                        transitionAppear={true}
+                        transitionAppearTimeout={500}
+                    >
                 <ul>
                 {this.state.posts.map(post =>
                     <li key={post.id}>{post.title}</li>
                 )}
                 </ul>
+
+                </TransitionGroup>
             </div>
         )
     }
