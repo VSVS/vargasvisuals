@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
-import {Container, Tab, Grid, Menu, Button} from 'semantic-ui-react'
+import {Container, Tab, Grid, Menu, Button, Image} from 'semantic-ui-react'
 import Hire from './Hire'
+import WorkStation from './WorkStation'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
+// Slides
+import Service1 from '../imgs/service1.jpg'
+import Service2 from '../imgs/service2.jpg'
 
 
 // import SemanticUI from '../imgs/semantic.png';
@@ -32,6 +36,8 @@ class Home extends Component {
 
         <div className="hero">
           <Container>
+            <Grid columns="2" stackable="true">
+            <Grid.Column>
           <h5>Robert Vargas</h5>
     
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 248">
@@ -46,16 +52,26 @@ class Home extends Component {
 
 
           <h5>Growth Marketer</h5>
+          </Grid.Column>
+
+          <Grid.Column>
+
+              <WorkStation/>      
+
+          </Grid.Column>
+
+          </Grid>
+          
           </Container>
         </div>
 
 
         <div className="intro">
          <Container>
-          <Grid colums={1}>
+          <Grid centered colums={1} padded>
           
-            <Grid.Row>
-              <Grid.Column>
+            <Grid.Row >
+              <Grid.Column width="10" >
                 <h1>Welcome</h1>
                 <p>
                   Im Robert Vargas and thanks for visiting my site. Over the years ive manifested numerous skills that took me years to refine.
@@ -75,6 +91,43 @@ class Home extends Component {
             </Grid.Row>
             
           </Grid>
+        </Container>
+        </div>
+        <div className="frontend">
+        <Container>
+          <Grid>
+            <Grid.Row columns="2">
+              <Grid.Column>
+                  <img src={Service1} />
+
+              </Grid.Column>
+              <Grid.Column>
+                  <h1>Great Front End Design!</h1>
+              </Grid.Column>
+
+
+
+
+              <Grid.Column>
+                  <h1>Awesome UX BRO!</h1>
+              </Grid.Column>
+
+              <Grid.Column>
+                  <img src={Service2} />
+
+              </Grid.Column>
+              
+
+            </Grid.Row>
+          </Grid>
+        </Container>
+        </div>
+        <div className="design">
+        <Container>
+        </Container>
+        </div>
+        <div className="marketing">
+        <Container>
         </Container>
         </div>
         

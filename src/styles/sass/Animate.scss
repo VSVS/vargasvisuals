@@ -1,25 +1,179 @@
-.path-wrap{
-  position:relative;
+#Arm_x5F_mouse {
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    transform-origin: bottom left;
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate3d(0deg);
+    }
+    30% {
+        -webkit-transform: rotate(-7deg);
+    }
+    70% {
+        -webkit-transform: rotate(3deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+#left-arm {
+    animation-name: type;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom right;
+}
+
+@keyframes type {
+    0% {
+        -webkit-transform: rotate3d(0deg);
+    }
+    30% {
+        -webkit-transform: rotate(10deg);
+    }
+    70% {
+        -webkit-transform: rotate(-3deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+#vapor1,
+#vapor2,
+#vapor3 {
+    animation-name: vape;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes vape {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    33% {
+        transform: translateY(1px);
+    }
+    50% {
+        opacity: .25;
+    }
+    66% {
+        transform: translateY(1px);
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+#blinkers polygon {
+    animation-name: blink;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#ms-rect,
+#ms-circ,
+#ms-bl,
+#ms-br,
+#ms-rect-thin,
+#ms-cube-1,
+#ms-cube-2,
+#ms-cube-3 {
+    stroke-dasharray: 479.79;
+    stroke-dashoffset: 479.79;
+    stroke: #333;
+    fill: #fff;
+    animation: dash 5s infinite;
+}
+
+#ms-rect {
+    animation-delay: .5s;
+}
+
+#ms-rect-thin {
+    animation-delay: 1s;
+    stroke-dasharray: 397.5258483886719;
+}
+
+#ms-cube-1 {
+    animation-delay: 1.5s;
+}
+
+#ms-cube-2 {
+    animation-delay: 2s;
+}
+
+#ms-cube-3 {
+    animation-delay: 2.5s;
+}
+
+#ms-bl {
+    animation-delay: 3s;
+}
+
+#ms-circ {
+    animation-delay: 3.5s;
+}
+
+#ms-br {
+    animation-delay: 4s;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 479.79;
+    }
+    75% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+    }
+    100% {
+        fill: #333;
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+.animate {
+    animation-duration: 1s;
+}
+
+.path-wrap {
+    position: relative;
 }
 
 .path {
-    position:absolute;
+    position: absolute;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: flash 2.5s ease-in-out 0.2s;
     stroke: #fff;
-    fill:#fff;
-
-    
+    fill: #fff;
 }
 
 @keyframes flash {
     0% {
         stroke-dashoffset: 1000;
-        fill: #348AC7;  
+        fill: #348AC7;
         -webkit-transform: translateY(20px);
         transform: translateY(20px);
-        
     }
     10% {
         fill: rgba(0, 0, 0, 1);
@@ -49,75 +203,61 @@
     100% {
         stroke-dashoffset: 0;
         fill: #fff;
-        
         -webkit-transform: translateY(0px);
         transform: translateY(0px);
         opacity: 1;
     }
 }
+
 .animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 
 @keyframes pulse {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    transform: scale3d(1, 1, 1);
-  }
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
 }
 
 .pulse {
-  animation-name: pulse;
+    animation-name: pulse;
 }
 
-
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: none;
-  }
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 .fadeInUp {
-  animation-name: fadeInUp;
+    animation-name: fadeInUp;
 }
 
-
-body {
-  
-  .ui.segment.pushable{
 // CSS TransitionGroup 
 .fade-enter {
-  opacity: 0.01;
+    opacity: 0.01;
 }
-
 .fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
+    opacity: 1;
+    transition: opacity 500ms ease-in;
 }
-
 .fade-leave {
-  opacity: 1;
+    opacity: 1;
 }
-
 .fade-leave.fade-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
 }
 // END CSS TransitionGroup 
-
-  }
-}

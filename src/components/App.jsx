@@ -10,7 +10,7 @@ import {
   Link
 } from 'react-router-dom'
 
-import { Sidebar, Segment, Button, Menu, Image, Icon, Header, Container } from 'semantic-ui-react'
+import { Sidebar, Segment, Button, Menu, Image, Icon, Header, Container , Grid} from 'semantic-ui-react'
 
 
 class App extends React.Component {
@@ -94,6 +94,17 @@ class App extends React.Component {
       <Router>
           <div>
 
+
+            <div class="header">
+
+              <Container>
+                <Grid.Row>
+                  <Grid.Column>
+                    <Menu as={Link} to="/"><h1>Idevelop.nyc</h1></Menu>
+                  </Grid.Column>
+                </Grid.Row>
+              </Container>
+            </div>
             <Button className='main-menu' onClick={this.toggleVisibility}><Icon name={this.state.menuIcon} /></Button>
 
           

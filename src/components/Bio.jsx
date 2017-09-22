@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import TimeLine from './Timeline';
-import { Grid, Container, Tab, Menu, Button} from 'semantic-ui-react';
+import React, { Component } from 'react'
+import TimeLine from './Timeline'
+import { Grid, Container, Tab, Menu, Button} from 'semantic-ui-react'
+
 
 
 
@@ -71,6 +72,7 @@ class Bio extends React.Component{
         <div>
 
           <div id="bio">
+         
             <Container>
               <div className="skills">
                 <h1>Code Skills</h1>
