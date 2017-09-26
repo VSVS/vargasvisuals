@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import JobSharks from './jobsharks';
 import CodeWear from './codewear';
 import MyLandlordScore from './mylandlordscore';
-import TransitionGroup from 'react-addons-css-transition-group';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import {
   Sidebar,
@@ -28,13 +28,12 @@ const Projects = ({match}) => (
             
             <h2>Projects</h2>
             <h3>Please select a project.</h3>
-            <TransitionGroup
+            <ReactCSSTransitionGroup
               transitionName="fade"
               transitionEnterTimeout={500}
               transitionLeaveTimeout={500}
               transitionAppear={true}
-              transitionAppearTimeout={500}
-            >
+              transitionAppearTimeout={500}>
               <Grid columns={1} divided>
                 <Grid.Row>
 
@@ -86,7 +85,7 @@ const Projects = ({match}) => (
                 </Grid.Row>
                 
                 </Grid>
-            </TransitionGroup>
+            </ReactCSSTransitionGroup>
         </Container>
 
     )}/>

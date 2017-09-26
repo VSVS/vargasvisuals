@@ -95,7 +95,7 @@ class App extends React.Component {
           <div>
 
 
-            <div class="header">
+            <header>
 
               <Container>
                 <Grid.Row>
@@ -104,7 +104,9 @@ class App extends React.Component {
                   </Grid.Column>
                 </Grid.Row>
               </Container>
-            </div>
+            
+            </header>
+            
             <Button className='main-menu' onClick={this.toggleVisibility}><Icon name={this.state.menuIcon} /></Button>
 
           

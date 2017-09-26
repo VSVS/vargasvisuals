@@ -1,8 +1,6 @@
 body{
-    form textarea#message{
-        border: none;
-        border-bottom: solid 1px #26a69a;
-        outline:none;
-    
-    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }   
 }

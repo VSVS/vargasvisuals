@@ -45,6 +45,20 @@ body{
     a.item.link:hover{
         color:#010f61;
     }
+    header{
+        background: #333;
+        .ui.container{
+            background: rgba(0,0,0,0) !important;
+            .ui.menu{
+                background: rgba(0,0,0,0) !important;
+                h1{
+                    color: #03A9F4;
+                    text-shadow: 0px 0px 4px;
+                }
+            }
+        }
+        
+    }
 
     footer{
         height: 300px;
