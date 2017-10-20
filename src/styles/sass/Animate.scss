@@ -210,7 +210,7 @@
 }
 
 .animated {
-    animation-duration: 1s;
+    animation-duration: .4s;
     animation-fill-mode: both;
 }
 
@@ -244,6 +244,24 @@
 .fadeInUp {
     animation-name: fadeInUp;
 }
+
+
+@keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -10%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  .fadeInDown {
+    animation-name: fadeInDown;
+  }
+  
 
 // CSS TransitionGroup 
 

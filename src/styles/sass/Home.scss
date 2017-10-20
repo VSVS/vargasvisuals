@@ -8,7 +8,21 @@ body{
       flex-direction: column;
       justify-content: center;
       h5{
-          font-size: 4em;
+        font-size: 38px;
+        margin-bottom: -3px;
+        margin-top: 100px;
+      }
+      h5:last-child{
+        margin-top: -12px;
+      }
+      @media (max-width:470px){
+        h5{
+          font-size: 24px;
+          margin-top: 0px;
+        }
+        h5:last-child{
+          margin-top: -7px;
+        }
       }
         
     }
@@ -16,6 +30,7 @@ body{
       background: #333;
       color:#fff;
       padding:50px;
+      margin-top: -5px;
     }
     .skills{
       height:500px;

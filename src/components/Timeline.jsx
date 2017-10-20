@@ -21,9 +21,12 @@ class TimeLine extends React.Component{
 
             <Grid.Row>
               <Grid.Column mobile="3" computer="3">
-                <h1>2010</h1>
-                <span className="connection"></span>
-                <span className="connection end"></span>
+                <div className='string-wrapper'>
+                  <h1>2010</h1>
+                  <span className="connection"></span>
+                  <div className="string"></div>
+                  <span className="connection end"></span>
+                </div>
               </Grid.Column>
               <Grid.Column mobile="13" computer="13">
                 <h2>Graduation</h2>
@@ -36,16 +39,21 @@ class TimeLine extends React.Component{
 
              <Grid.Row>
               <Grid.Column mobile="3" computer="3">
+              <div className='string-wrapper'>
                 <h1>2011</h1>
                 <span className="connection"></span>
+                <div className="string"></div>
                 <span className="connection end"></span>
+                </div>
               </Grid.Column>
               <Grid.Column mobile="13" computer="13">
+              <div className='string-wrapper'>
                 <h2>Hired as Print Designer at Duggal</h2>
                 <p>This was my first job after graduation and the beginning of my 
                     professional career. During my time at duggal i learned advanced
                     photo retouching and color matching techniques. I operated wide
                     format print machines (16ft) as well as prepping files for production and vector files for laser cutting machines.</p>
+              </div>
               </Grid.Column>
             </Grid.Row>
 
@@ -53,9 +61,12 @@ class TimeLine extends React.Component{
 
              <Grid.Row>
               <Grid.Column mobile="3" computer="3">
+              <div className='string-wrapper'>
                 <h1>2012</h1>
                 <span className="connection"></span>
+                <div className="string"></div>
                 <span className="connection end"></span>
+              </div>
               </Grid.Column>
               <Grid.Column mobile="13" computer="13">
                 <h2>Started web design internship at StarChefs</h2>
@@ -69,9 +80,12 @@ class TimeLine extends React.Component{
 
               <Grid.Row>
               <Grid.Column mobile="3" computer="3">
+              <div className='string-wrapper'>
                 <h1>2013</h1>
                 <span className="connection"></span>
+                <div className="string"></div>
                 <span className="connection end"></span>
+              </div>
               </Grid.Column>
               <Grid.Column mobile="13" computer="13">
                 <h2>Prepress technician at VGS</h2>
@@ -83,9 +97,12 @@ class TimeLine extends React.Component{
 
            <Grid.Row>
               <Grid.Column mobile="3" computer="3">
+              <div className='string-wrapper'>
                 <h1>2014</h1>
                 <span className="connection"></span>
+                <div className="string"></div>
                 <span className="connection end"></span>
+              </div>
               </Grid.Column>
               <Grid.Column mobile="13" computer="13">
                 <div>
@@ -110,13 +127,18 @@ class TimeLine extends React.Component{
 
             <Grid.Row>
               <Grid.Column mobile="3" computer="3">
+             <div className='string-wrapper'>
                 <h1>2015</h1>
                 <span className="connection"></span>
+                <div className="string"></div>
                 <span className="connection end"></span>
+              </div>
               </Grid.Column>
               <Grid.Column mobile="13" computer="13">
+             <div className='string-wrapper'>
                 <h2>FLEX</h2>
                 <p>FLEX is where i’ve spent most of my dev career. Here i was given the chance to use many of my skills that i’ve built up over the years. I was designing, developing and scaling internal build systems. I was able to refine my craft but also fortunate enough to learn the depths of running a businsess as a bonus. Given the liberty of working independently and mananging remote engineers i gained the competency of working on any project and putting together a plan of action.</p>
+              </div>
               </Grid.Column>
             </Grid.Row>
 
@@ -125,8 +147,9 @@ class TimeLine extends React.Component{
 
             <Grid.Row>
               <Grid.Column mobile="3" computer="3">
+              <div className='string-wrapper'>
                 <h1>2017</h1>
-                <span className="connection"></span>
+              </div>
               </Grid.Column>
               <Grid.Column mobile="13" computer="13">
                 <h2>Code in the Dark Hackathon</h2>

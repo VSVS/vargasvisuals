@@ -1,8 +1,7 @@
-import React, {Component} from 'react';
+import React, {Component, Render} from 'react';
 import JobSharks from './jobsharks';
 import CodeWear from './codewear';
 import MyLandlordScore from './mylandlordscore';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import {
   Sidebar,
@@ -16,7 +15,15 @@ import {
   Grid
 } from 'semantic-ui-react'
 
-const Projects = ({match}) => (
+class Projects extends React.Component{
+  componentDidMount(){
+    window.scrollTo(0,0)
+  }
+  render(){
+
+  const { match } = this.props
+
+  return(
   <div>
  
    <Route
@@ -24,20 +31,15 @@ const Projects = ({match}) => (
       path={match.url}
       render={() => (
       
-        <Container>
+        <Container className="animated fadeInDown">
             
             <h2>Projects</h2>
-            <h3>Please select a project.</h3>
-            <ReactCSSTransitionGroup
-              transitionName="fade"
-              transitionEnterTimeout={500}
-              transitionLeaveTimeout={500}
-              transitionAppear={true}
-              transitionAppearTimeout={500}>
+            
+            
               <Grid columns={1} divided>
                 <Grid.Row>
 
-                  <Grid.Column width="16">
+                  <Grid.Column width="16" className="project">
                     <Menu.Item as={Link} to={`${match.url}/jobsharks`} name='jobsharks'>
                       <Grid>
                       <Grid.Row columns="2" centered>
@@ -52,7 +54,7 @@ const Projects = ({match}) => (
                     </Menu.Item>
                   </Grid.Column>
 
-                    <Grid.Column width="16">
+                    <Grid.Column width="16" className="project">
                       <Menu.Item as={Link} to={`${match.url}/mylandlordscore`} name='mylandlordscore'>
                         <Grid>
                         <Grid.Row columns="2" centered>
@@ -67,7 +69,7 @@ const Projects = ({match}) => (
                       </Menu.Item>
                     </Grid.Column>
 
-                    <Grid.Column width="16">
+                    <Grid.Column width="16" className="project">
                       <Menu.Item as={Link} to={`${match.url}/codewear`} name='codewear'>
                       <Grid>
                         <Grid.Row columns="2" centered>
@@ -85,7 +87,6 @@ const Projects = ({match}) => (
                 </Grid.Row>
                 
                 </Grid>
-            </ReactCSSTransitionGroup>
         </Container>
 
     )}/>
@@ -101,7 +102,9 @@ const Projects = ({match}) => (
 
      
   </div>
-)
+  )
+  }
+}
 
 export default Projects;
 
