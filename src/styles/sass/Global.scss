@@ -60,6 +60,12 @@ body{
         
     }
 
+    #edge{
+        @media(max-width:470px){
+            display: none;
+        }
+    }
+
     footer{
         height: 300px;
         width: calc(100% + 31px);
@@ -71,6 +77,9 @@ body{
         bottom: -14px;
         left: -14px;
         padding-right: 14px;
+        @media(max-width:470px){
+            position:initial;
+        }
         .ui.segment{
             background: #000000;
             background: -webkit-linear-gradient(to right, #434343, #000000);

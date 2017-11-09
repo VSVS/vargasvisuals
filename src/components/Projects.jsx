@@ -15,103 +15,239 @@ import {
   Grid
 } from 'semantic-ui-react'
 
-class Projects extends React.Component{
-  componentDidMount(){
-    window.scrollTo(0,0)
+class Projects extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
   }
-  render(){
+  render() {
 
-  const { match } = this.props
+    const {match} = this.props
 
-  return(
-  <div>
- 
-   <Route
-      exact
-      path={match.url}
-      render={() => (
-      
-        <Container className="animated fadeInDown">
-            
+    return (
+      <div>
+
+        <Route
+          exact
+          path={match.url}
+          render={() => (
+          <Container className="animated fadeInDown">
             <h2>Projects</h2>
-            
-            
-              <Grid columns={1} divided>
-                <Grid.Row>
-
-                  <Grid.Column width="16" className="project">
-                    <Menu.Item as={Link} to={`${match.url}/jobsharks`} name='jobsharks'>
-                      <Grid>
-                      <Grid.Row columns="2" centered>
-                        <Grid.Column width="5">
-                          <Image size="medium" src='http://fillmurray.com/300/300'/>
+            {/* 3 Across */}
+            <Grid stackable>
+              <Grid.Row columns={3}>
+                <Grid.Column>
+                  <Menu.Item as={Link} to={`${match.url}/jobsharks`} name='jobsharks'>
+                    <Grid className="project">
+                      <Grid.Row columns="1" centered>
+                        <Grid.Column >
+                          <Image fluid src='http://fillmurray.com/600/600'/>
                         </Grid.Column>
-                        <Grid.Column width="11">
+                        <Grid.Column >
                           <h1>JobSharks</h1>
+                          <p>Job Search Listings</p>
                         </Grid.Column>
                       </Grid.Row>
-                      </Grid>
-                    </Menu.Item>
-                  </Grid.Column>
+                    </Grid>
+                  </Menu.Item>
+                </Grid.Column>
+                <Grid.Column>
+                  <Menu.Item as={Link} to={`${match.url}/mylandlordscore`} name='mylandlordscore'>
+                    <Grid className="project">
+                      <Grid.Row columns="1" centered>
+                        <Grid.Column>
+                          <Image fluid src='http://fillmurray.com/600/600'/>
+                        </Grid.Column>
+                        <Grid.Column>
+                          <h1>MyLandlordScore</h1>
+                          <p>Landlord reviews</p>
+                        </Grid.Column>
+                      </Grid.Row>
+                    </Grid>
+                  </Menu.Item>
+                </Grid.Column>
+                <Grid.Column>
+                  <Menu.Item as={Link} to={`${match.url}/codewear`} name='codewear'>
+                    <Grid className="project">
+                      <Grid.Row columns="1" centered>
+                        <Grid.Column>
+                          <Image fluid src='http://fillmurray.com/600/600'/>
+                        </Grid.Column>
+                        <Grid.Column>
+                          <h1>CodeWear</h1>
+                          <p>
+                            Ecommerce Store
+                          </p>
+                        </Grid.Column>
+                      </Grid.Row>
+                    </Grid>
+                  </Menu.Item>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
 
-                    <Grid.Column width="16" className="project">
-                      <Menu.Item as={Link} to={`${match.url}/mylandlordscore`} name='mylandlordscore'>
-                        <Grid>
-                        <Grid.Row columns="2" centered>
-                          <Grid.Column width="5">
-                            <Image size="medium" src='http://fillmurray.com/300/300'/>
-                          </Grid.Column>
-                          <Grid.Column width="11">
-                            <h1>MyLandlordScore</h1>
-                          </Grid.Column>
-                        </Grid.Row>
-                        </Grid>
-                      </Menu.Item>
-                    </Grid.Column>
+            {/* 4 Across */}
+            <Grid>
+              <Grid.Row columns={4}>
+                <Grid.Column computer={4} mobile={8}>
+                  <Menu.Item as={Link} to={`${match.url}/codewear`} name='codewear'>
+                    <Grid className="project">
+                      <Grid.Row columns="1" centered>
+                        <Grid.Column>
+                          <Image fluid src='http://fillmurray.com/600/600'/>
+                        </Grid.Column>
+                        <Grid.Column>
+                          <h1>CodeWear</h1>
+                          <p>
+                            Ecommerce Store
+                          </p>
+                        </Grid.Column>
+                      </Grid.Row>
+                    </Grid>
+                  </Menu.Item>
+                </Grid.Column>
 
-                    <Grid.Column width="16" className="project">
-                      <Menu.Item as={Link} to={`${match.url}/codewear`} name='codewear'>
-                      <Grid>
-                        <Grid.Row columns="2" centered>
-                          <Grid.Column width="5">
-                            <Image size="medium" src='http://fillmurray.com/300/300'/>
-                          </Grid.Column>
-                          <Grid.Column width="11">
-                            <h1>CodeWear</h1>
-                          </Grid.Column>
-                        </Grid.Row>
-                      </Grid>
-                    </Menu.Item>
-                  </Grid.Column>
-                  
+                <Grid.Column computer={4} mobile={8}> 
+                  <Menu.Item as={Link} to={`${match.url}/codewear`} name='codewear'>
+                    <Grid className="project">
+                      <Grid.Row columns="1" centered>
+                        <Grid.Column>
+                          <Image fluid src='http://fillmurray.com/600/600'/>
+                        </Grid.Column>
+                        <Grid.Column>
+                          <h1>CodeWear</h1>
+                          <p>
+                            Ecommerce Store
+                          </p>
+                        </Grid.Column>
+                      </Grid.Row>
+                    </Grid>
+                  </Menu.Item>
+                </Grid.Column>
+
+                <Grid.Column computer={4} mobile={8}>
+                  <Menu.Item as={Link} to={`${match.url}/codewear`} name='codewear'>
+                    <Grid className="project">
+                      <Grid.Row columns="1" centered>
+                        <Grid.Column>
+                          <Image fluid src='http://fillmurray.com/600/600'/>
+                        </Grid.Column>
+                        <Grid.Column>
+                          <h1>CodeWear</h1>
+                          <p>
+                            Ecommerce Store
+                          </p>
+                        </Grid.Column>
+                      </Grid.Row>
+                    </Grid>
+                  </Menu.Item>
+                </Grid.Column>
+
+                <Grid.Column computer={4} mobile={8}>
+                  <Menu.Item as={Link} to={`${match.url}/codewear`} name='codewear'>
+                    <Grid className="project">
+                      <Grid.Row columns="1" centered>
+                        <Grid.Column>
+                          <Image fluid src='http://fillmurray.com/600/600'/>
+                        </Grid.Column>
+                        <Grid.Column>
+                          <h1>CodeWear</h1>
+                          <p>
+                            Ecommerce Store
+                          </p>
+                        </Grid.Column>
+                      </Grid.Row>
+                    </Grid>
+                  </Menu.Item>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+
+
+
+
+            {/* 5 Across */}
+            <Grid centered>
+              <Grid.Row columns={5}>
+              
+                <Grid.Column >
+                  <Menu.Item as={Link} to={`${match.url}/codewear`} name='codewear'>
+                    <Grid className="project">
+                      <Grid.Row columns="1" centered>
+                        <Grid.Column>
+                          <Image fluid src='http://fillmurray.com/600/600'/>
+                        </Grid.Column>
+                       
+                      </Grid.Row>
+                    </Grid>
+                  </Menu.Item>
+                </Grid.Column>
+
+                <Grid.Column >
+                  <Menu.Item as={Link} to={`${match.url}/codewear`} name='codewear'>
+                    <Grid className="project">
+                      <Grid.Row columns="1" centered>
+                        <Grid.Column>
+                          <Image fluid src='http://fillmurray.com/600/600'/>
+                        </Grid.Column>
+                       
+                      </Grid.Row>
+                    </Grid>
+                  </Menu.Item>
+                </Grid.Column>
+
+                <Grid.Column >
+                  <Menu.Item as={Link} to={`${match.url}/codewear`} name='codewear'>
+                    <Grid className="project">
+                      <Grid.Row columns="1" centered>
+                        <Grid.Column>
+                          <Image fluid src='http://fillmurray.com/600/600'/>
+                        </Grid.Column>
+                      
+                      </Grid.Row>
+                    </Grid>
+                  </Menu.Item>
+                </Grid.Column>
+
+                <Grid.Column >
+                  <Menu.Item as={Link} to={`${match.url}/codewear`} name='codewear'>
+                    <Grid className="project">
+                      <Grid.Row columns="1" centered>
+                        <Grid.Column>
+                          <Image fluid src='http://fillmurray.com/600/600'/>
+                        </Grid.Column>
+                       
+                      </Grid.Row>
+                    </Grid>
+                  </Menu.Item>
+                </Grid.Column>
+
+                <Grid.Column>
+                  <Menu.Item as={Link} to={`${match.url}/codewear`} name='codewear'>
+                    <Grid className="project">
+                      <Grid.Row columns="1" centered>
+                        <Grid.Column>
+                          <Image fluid src='http://fillmurray.com/600/600'/>
+                        </Grid.Column>
+                       
+                      </Grid.Row>
+                    </Grid>
+                  </Menu.Item>
+                </Grid.Column>
+
                 </Grid.Row>
-                
                 </Grid>
-        </Container>
-
-    )}/>
-    
-
-    <Route path={`${match.url}/mylandlordscore`} component={MyLandlordScore}/>
-    <Route path={`${match.url}/codewear`} component={CodeWear}/>
-    <Route path={`${match.url}/jobsharks`} component={JobSharks}/>
-   
 
 
-    
+          </Container>
+        )}/>
 
-     
-  </div>
-  )
+        <Route path={`${match.url}/mylandlordscore`} component={MyLandlordScore}/>
+        <Route path={`${match.url}/codewear`} component={CodeWear}/>
+        <Route path={`${match.url}/jobsharks`} component={JobSharks}/>
+
+      </div>
+    )
   }
 }
 
 export default Projects;
-
-
-
-
-
-
-
-

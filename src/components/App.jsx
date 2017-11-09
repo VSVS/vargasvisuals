@@ -128,7 +128,7 @@ class App extends React.Component {
               <Grid.Row>
                 <Grid.Column>
                   <Menu as={Link} to="/">
-                    <h1>Idevelop.nyc</h1>
+                    <h1>VSVS</h1>
                   </Menu>
                 </Grid.Column>
               </Grid.Row>
@@ -204,7 +204,7 @@ class App extends React.Component {
                     </Grid.Row>
 
                     <Grid.Row centered columns={1}>
-                      <Grid.Column><h1>RobertVargas.io</h1></Grid.Column>
+                      <Grid.Column><h1>VargasVisuals.com</h1></Grid.Column>
                     </Grid.Row>
 
                   </Grid>
@@ -213,7 +213,7 @@ class App extends React.Component {
             </Sidebar.Pushable>
           </Sidebar.Pusher>
 
-          <div style={style.sidebar} onMouseOver={this.toggleVisibility}></div>
+          <div id="edge" style={style.sidebar} onMouseOver={this.toggleVisibility}></div>
 
         </div>
       </Router>
