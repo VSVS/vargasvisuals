@@ -13,7 +13,9 @@ import WorkStation from './WorkStation'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
 
-// import SemanticUI from '../imgs/semantic.png';
+import swoosh from '../imgs/swoosh.png'
+import profile from '../imgs/profile2.jpg'
+
 
 class Home extends Component {
 
@@ -33,7 +35,7 @@ class Home extends Component {
 
       <div>
 
-        <div className="hero">
+        <div className="hero" style={{backgroundImage: `url(${swoosh})` }}>
           <Container>
             <Grid columns="2" stackable="true">
               <Grid.Column>
@@ -84,28 +86,20 @@ class Home extends Component {
 
         <div className="intro">
           <Container>
-            <Grid centered>
+            <Grid centered stackable>
 
               <Grid.Row colums={1}>
                 <Grid.Column computer='10' mobile='16'>
-                  <h1>Welcome</h1>
-                  <p>
-                    Im Robert Vargas and thanks for visiting my site. Over the years ive manifested
-                    numerous skills that took me years to refine. I created this site to share my
-                    experience with the world as well as fellow developers. If you have any
-                    questions don't hesitate to
-                    <Menu.Item className="link" as={Link} to='/hire' name='hire'>
-                      reach out</Menu.Item>
-                  </p>
+                  <Image className='profile' src={profile} />
                 </Grid.Column>
               </Grid.Row>
 
               <Grid.Row columns={2}>
                 <Grid.Column >
-                  <Button floated='right' as={Link} to='/bio'><Icon name='user circle'></Icon>Read Bio</Button>
+                  <Button size='large' floated='right' as={Link} to='/bio'><Icon name='user circle'></Icon>Read Bio</Button>
                 </Grid.Column>
                 <Grid.Column >
-                  <Button floated='left' as={Link} to='/projects'><Icon name='grid layout'></Icon>View Projects</Button>
+                  <Button size='large' floated='left' as={Link} to='/projects'><Icon name='grid layout'></Icon>View Projects</Button>
                 </Grid.Column>
               </Grid.Row>
 

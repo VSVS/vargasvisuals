@@ -64,10 +64,6 @@ class App extends React.Component {
         .removeEventListener('click', this.handleClick);
     }
   }
-  // handleScreenBackgroundColorChange(color){   <Route exact path="/"
-  // component={Home}/>   <Route path="/bio" component={Bio}/>   <Route
-  // path="/projects" component={Projects}/>   <Route path="/resume"
-  // component={Resume}/>   <Route path="/hire" component={Hire}/> }
 
   handleClick = () => {
     if (this.state.visible) {
@@ -173,7 +169,7 @@ class App extends React.Component {
                 <Container>
                   <Grid>
                     <Grid.Row centered columns={3}>
-                      <Grid.Column width={2}>
+                      <Grid.Column width={2} mobile='3'>
                       <a href="https://github.com/VSVS">
                         <Segment>
                           
@@ -182,7 +178,7 @@ class App extends React.Component {
                         </Segment>
                         </a>
                       </Grid.Column>
-                      <Grid.Column width={2}>
+                      <Grid.Column width={2} mobile='3'>
                       <a href='https://linkedin.com/in/robertvargas'>
                         <Segment>
                           
@@ -192,7 +188,7 @@ class App extends React.Component {
                         </a>
 
                       </Grid.Column>
-                      <Grid.Column width={2}>
+                      <Grid.Column width={2} mobile='3'>
                      <Link to='/hire' name='hire'>
                         <Segment >
                           
@@ -204,7 +200,7 @@ class App extends React.Component {
                     </Grid.Row>
 
                     <Grid.Row centered columns={1}>
-                      <Grid.Column><h1>VargasVisuals.com</h1></Grid.Column>
+                      <Grid.Column><h1>&copy; VargasVisuals.com 2018</h1></Grid.Column>
                     </Grid.Row>
 
                   </Grid>

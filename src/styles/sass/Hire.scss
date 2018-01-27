@@ -1,22 +1,33 @@
 body{
-    form{
-        display: flex;
-        flex-direction: column;
-        background: #8e9eab;
-        padding: 10px;
-        border-radius: 5px;
-        .selection{
-            margin: 0 0 1em;
+    
+    .hire{
+        margin-top:40px !important;
+        margin-bottom:40px !important;
+        @media(max-width:550px){
+            height:auto;
         }
-        button~div {
+        h1{
+            font-family: 'Montserrat'
+        }
+        form{
             display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .ui.dropdown{
-            background: #ccc;
-            padding: 5px;
-            color: #333;        
-        }
-    }   
+            flex-direction: column;
+            background: #8e9eab;
+            padding: 10px;
+            border-radius: 5px;
+                .selection{
+                    margin: 0 0 1em;
+                }
+                button~div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .ui.dropdown{
+                    background: #ccc;
+                    padding: 5px;
+                    color: #333;        
+                }
+        }   
+    }
 }

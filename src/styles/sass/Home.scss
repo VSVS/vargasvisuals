@@ -2,11 +2,13 @@ body{
     min-height: 50vh;
     .hero{
       height: 75vh;
-       margin-top: 20px;
       width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      background-size:1000px;
+      background-position:top;
+      background-repeat:no-repeat;
       h5{
         font-size: 38px;
         margin-bottom: -3px;
@@ -30,7 +32,31 @@ body{
       background: #333;
       color:#fff;
       padding:50px;
-      margin-top: -5px;
+      margin-top: -42px;
+      img{
+        width: 200px;
+        margin: 0 auto;
+        border: solid 4px #2284d1;
+
+      }
+      .profile{
+        border-radius:100%;
+      }
+      a.ui.floated.button{
+        background: #2185d0;
+        color:#fff;
+        margin-bottom: 40px;
+        width:200px;
+        &:hover{
+          background: #165c8d;
+        }
+        @media(max-width:470px){
+          &:first-child{
+            margin-bottom:-20px;
+          }
+          width:100%;
+        }
+      }
     }
     .skills{
       height:500px;

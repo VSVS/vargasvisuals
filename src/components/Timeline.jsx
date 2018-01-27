@@ -13,7 +13,7 @@ class TimeLine extends React.Component{
 
           {/*Timeline*/}
           <div className="timeline">
-            <Grid columns={2} divided>
+            <Grid columns={2}>
 
 
 
