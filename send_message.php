@@ -18,7 +18,7 @@
     } else $company = sanitizeInput($_POST["company"]);
     
     
-    $to = "email@gmail.com";
+    $to = "vargasroebrt28@gmail.com";
     $subject = "Job Inquiry";
 
     $emailTemplate = "

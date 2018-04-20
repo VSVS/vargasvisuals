@@ -2,7 +2,7 @@
     animation-name: rotate;
     animation-iteration-count: infinite;
     animation-duration: 5s;
-    transform-origin: bottom left;
+    transform-origin: center;
 }
 
 @keyframes rotate {
@@ -24,7 +24,7 @@
     animation-name: type;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    transform-origin: bottom right;
+    transform-origin: center;
 }
 
 @keyframes type {

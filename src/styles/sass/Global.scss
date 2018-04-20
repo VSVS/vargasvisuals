@@ -1,35 +1,51 @@
 body{
-    .pusher{
-        .ui.segment.pushable{
-            @media(max-width:470px){
-                margin-right: -10px;            
-                
-             }
-        }
-        
-    }
+    
+   
     .heading{
         font-family: 'Montserrat'
     }
-    nav{
-        background:#222;
-        
-    }
+    
     .ui.button:hover,.ui.button:focus{
         background: rgba(0,0,0,0);
         color:#03A9F4;
     }
-    .ui.segment.pushable{
-        border: 0px;
-        box-shadow: none;
-        margin: 0px;
-        border-radius: 0px;
+    .ui.segment{
+        header{
+            position: fixed;
+            z-index: 3;
+            top:0px;
+            width: 100%;
+            background: #333;
+            padding-bottom: 7px;
+            padding-top: 7px;
+            .ui.container{
+                background: rgba(0,0,0,0) !important;
+                .ui.menu{
+                    background: rgba(0,0,0,0) !important;
+                    h1{
+                        color: #03A9F4;
+                        text-shadow: 0px 0px 4px;
+                    }
+                }
+            }
+            
+        }
+        &.pushable{
+            border: 0px;
+            box-shadow: none;
+            margin-top: 0px;
+            margin-bottom:0px;
+            border-radius: 0px;
+            background: #7474BF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            
 
-        background: #7474BF;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    
+        }
+        
     }
+    
     .ui.basic.segment{
         padding-top: 50px;
     }
@@ -56,39 +72,25 @@ body{
     a.item.link:hover{
         color:#010f61;
     }
-    header{
-        background: #333;
-        padding-bottom: 7px;
-        padding-top: 7px;
-        .ui.container{
-            background: rgba(0,0,0,0) !important;
-            .ui.menu{
-                background: rgba(0,0,0,0) !important;
-                h1{
-                    color: #03A9F4;
-                    text-shadow: 0px 0px 4px;
-                }
-            }
-        }
-        
-    }
+    
 
     #edge{
+        display: none;
         @media(max-width:470px){
             display: none;
         }
     }
 
     footer{
-        width: calc(100% + 31px);
+        //width: calc(100% + 31px);
         background: #232526;
         background: -webkit-linear-gradient(to top, #414345, #232526);
         background: linear-gradient(to top, #414345, #232526); 
-        position: relative;
-        bottom: -14px;
-        left: -14px;
-        padding-right: 14px;
-        margin-top: -30px;
+        // position: relative;
+        // bottom: -14px;
+        // left: -14px;
+        // padding-right: 14px;
+        // margin-top: -30px;
         @media(max-width:470px){
             position:initial;
             margin-top:0px;
@@ -109,8 +111,13 @@ body{
             align-items: center;
             justify-content: center;
             padding-right: 3px;
+            margin-top: 0px;
             border: solid;
             margin: 0 auto;
+            &.pushable{
+                margin-top:0px;
+            }
+            
             @media(max-width:588px){
                 height:50px;
                 width:50px;

@@ -3,7 +3,7 @@
     function post_captcha($user_response) {
         $fields_string = '';
         $fields = array(
-            'secret' => 'SECRET_KEY',
+            'secret' => '6LeRDDIUAAAAAJe9GObuvIySKbLv5XvwFtIkqnbV',
             'response' => $user_response
         );
         foreach($fields as $key=>$value)

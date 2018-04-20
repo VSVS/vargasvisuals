@@ -17,7 +17,9 @@ import {
   Header,
   Container,
   Grid,
-  List
+  List,
+  Sticky,
+  Rail
 } from 'semantic-ui-react'
 
 class App extends React.Component {
@@ -45,6 +47,9 @@ class App extends React.Component {
       .bind(this)
     this.onMouseLeaveHandler = this
       .onMouseLeaveHandler
+      .bind(this)
+    this.handleContextRef = this
+      .handleContextRef
       .bind(this)
 
   }
@@ -83,7 +88,7 @@ class App extends React.Component {
     this.setState({hover: false});
     console.log('leave');
   }
-
+  handleContextRef = contextRef => this.setState({ contextRef })
   toggleVisibility() {
 
     this.setState({
@@ -101,114 +106,132 @@ class App extends React.Component {
   }
 
   render() {
+    const { contextRef } = this.state
     const {visible} = this.state
     const style = {
-      height: '100vh',
+      //height: '100vh',
       sidebar: {
-        width: '30px',
-        height: '100vh',
-        position: 'fixed',
-        top: '0px',
-        right: '-1px',
+       // width: '30px',
+        //height: '100vh',
+        //position: 'fixed',
+        //top: '0px',
+        //right: '-1px',
         background: '#333'
       }
     }
-    return (
 
+
+    const stylez = {
+      layout: {display: "flex", flex: 1, minHeight: "100vh", flexDirection: "column", backgroundColor: '#E5E5E5'}
+  }
+  
+    return (
+      
       <Router>
         <div>
 
-          <header>
-
-            <Container>
-              <Grid.Row>
-                <Grid.Column>
-                  <Menu as={Link} to="/">
-                    <h1>VSVS</h1>
-                  </Menu>
-                </Grid.Column>
-              </Grid.Row>
-            </Container>
-
-          </header>
+         
 
           <Button className='main-menu' onClick={this.toggleVisibility}><Icon name={this.state.menuIcon}/></Button>
+          
+          <Sidebar.Pushable as={Segment} style={this.state.style}  ref={this.handleContextRef}>
+          
+          
 
-          <Sidebar
-            as={Menu}
-            onMouseLeave={this.toggleVisibility}
-            animation='overlay'
-            direction='right'
-            width='thin'
-            visible={visible}
-            icon='labeled'
-            vertical
-            inverted>
+                  <header >
 
-            <Menu.Item as={Link} to='/' name='home'><Icon name='home'/>Home</Menu.Item>
-            <Menu.Item as={Link} to='/bio' name='bio'><Icon name='user circle'/>Bio</Menu.Item>
-            <Menu.Item as={Link} to='/projects' name='projects'><Icon name='grid layout'/>Projects</Menu.Item>
-            <Menu.Item as={Link} to='/resume' name='resume'><Icon name='file text outline'/>Resume</Menu.Item>
-            <Menu.Item as={Link} to='/hire' name='hire'><Icon name='thumbs outline up'/>Hire Me</Menu.Item>
+                    <Container>
+                      <Grid.Row>
+                        <Grid.Column>
+                          <Menu as={Link} to="/">
+                            <h1>VSVS</h1>
+                          </Menu>
+                        </Grid.Column>
+                      </Grid.Row>
+                    </Container>
 
-          </Sidebar>
+                  </header>
+              
+                  <Sidebar
+                    as={Menu}
+                    //onMouseLeave={this.toggleVisibility}
+                    animation='slide along'
+                    direction='right'
+                    width='thin'
+                    visible={visible}
+                    icon='labeled'
+                    vertical
+                    inverted
+                    style={stylez.layout}
+                    >
+                    
+                      <div context={contextRef} pushing>
+                          <Menu.Item as={Link} to='/' name='home'><Icon name='home'/>Home</Menu.Item>
+                          <Menu.Item as={Link} to='/bio' name='bio'><Icon name='user circle'/>Bio</Menu.Item>
+                          <Menu.Item as={Link} to='/projects' name='projects'><Icon name='grid layout'/>Projects</Menu.Item>
+                          <Menu.Item as={Link} to='/resume' name='resume'><Icon name='file text outline'/>Resume</Menu.Item>
+                          <Menu.Item as={Link} to='/hire' name='hire'><Icon name='thumbs outline up'/>Hire Me</Menu.Item>
+                      </div>
+                    
+                  </Sidebar>
 
-          <Sidebar.Pusher >
-            <Sidebar.Pushable as={Segment} style={this.state.style}>
-              <Switch>
-                <Route exact path="/" component={Home}/>
-                <Route path="/bio" component={Bio}/>
-                <Route path="/projects" component={Projects}/>
-                <Route path="/resume" component={Resume}/>
-                <Route path="/hire" component={Hire}/>
-                <Route component={NotFound}/>
-              </Switch>
+                  <Sidebar.Pusher>
 
-              <footer>
+                <Switch>
+                  <Route exact path="/" component={Home}/>
+                  <Route path="/bio" component={Bio}/>
+                  <Route path="/projects" component={Projects}/>
+                  <Route path="/resume" component={Resume}/>
+                  <Route path="/hire" component={Hire}/>
+                  <Route component={NotFound}/>
+                </Switch>
+               
+                <footer >
 
-                <Container>
-                  <Grid>
-                    <Grid.Row centered columns={3}>
-                      <Grid.Column width={2} mobile='3'>
-                      <a href="https://github.com/VSVS">
-                        <Segment>
-                          
-                            <Icon name="github" size="huge"></Icon>
-                          
-                        </Segment>
-                        </a>
-                      </Grid.Column>
-                      <Grid.Column width={2} mobile='3'>
-                      <a href='https://linkedin.com/in/robertvargas'>
-                        <Segment>
-                          
-                            <Icon name="linkedin square" size="huge"></Icon>
-                          
-                        </Segment>
-                        </a>
+                  <Container>
+                    <Grid>
+                      <Grid.Row centered columns={3}>
+                        <Grid.Column width={2} mobile='3'>
+                        <a href="https://github.com/VSVS">
+                          <Segment>
+                            
+                              <Icon name="github" size="huge"></Icon>
+                            
+                          </Segment>
+                          </a>
+                        </Grid.Column>
+                        <Grid.Column width={2} mobile='3'>
+                        <a href='https://linkedin.com/in/robertvargas'>
+                          <Segment>
+                            
+                              <Icon name="linkedin square" size="huge"></Icon>
+                            
+                          </Segment>
+                          </a>
 
-                      </Grid.Column>
-                      <Grid.Column width={2} mobile='3'>
-                     <Link to='/hire' name='hire'>
-                        <Segment >
-                          
-                            <Icon name="mail outline" size="huge"></Icon>
-                          
-                        </Segment>
-                     </Link>
-                      </Grid.Column>
-                    </Grid.Row>
+                        </Grid.Column>
+                        <Grid.Column width={2} mobile='3'>
+                      <Link to='/hire' name='hire'>
+                          <Segment >
+                            
+                              <Icon name="mail outline" size="huge"></Icon>
+                            
+                          </Segment>
+                      </Link>
+                        </Grid.Column>
+                      </Grid.Row>
 
-                    <Grid.Row centered columns={1}>
-                      <Grid.Column><h1>&copy; VargasVisuals.com 2018</h1></Grid.Column>
-                    </Grid.Row>
+                      <Grid.Row centered columns={1}>
+                        <Grid.Column><h1>&copy; VargasVisuals.com 2018</h1></Grid.Column>
+                      </Grid.Row>
 
-                  </Grid>
-                </Container>
-              </footer>
-            </Sidebar.Pushable>
-          </Sidebar.Pusher>
+                    </Grid>
+                  </Container>
 
+                </footer>
+              
+            </Sidebar.Pusher>
+          </Sidebar.Pushable>
           <div id="edge" style={style.sidebar} onMouseOver={this.toggleVisibility}></div>
 
         </div>
