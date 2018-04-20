@@ -5,6 +5,8 @@ import Hire from './Hire'
 import Resume from './Resume'
 import Projects from './Projects'
 import NotFound from './NotFound'
+import Navigation from './Navigation';
+import Footer from './Footer';
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom'
 
 import {
@@ -25,49 +27,7 @@ import {
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      visible: false,
-      menuIcon: 'ellipsis vertical icon',
-      hover: false,
-      style: {
-        background: ''
-      }
-    }
-    this.toggleVisibility = this
-      .toggleVisibility
-      .bind(this)
-    this.handleClick = this
-      .handleClick
-      .bind(this)
-    this.handleKeyPress = this
-      .handleKeyPress
-      .bind(this)
-    this.onMouseEnterHandler = this
-      .onMouseEnterHandler
-      .bind(this)
-    this.onMouseLeaveHandler = this
-      .onMouseLeaveHandler
-      .bind(this)
-    this.handleContextRef = this
-      .handleContextRef
-      .bind(this)
 
-  }
-
-  componentWillUpdate(nextProps, nextState) {
-    // when the menu becomes visible, setup some handlers so we can close the menu
-    // easily
-    if (nextState.visible == true) {
-      document.addEventListener('keydown', this.handleKeyPress);
-      document
-        .querySelector('.pusher')
-        .addEventListener('click', this.handleClick);
-    } else {
-      document.removeEventListener('keydown', this.handleKeyPress);
-      document
-        .querySelector('.pusher')
-        .removeEventListener('click', this.handleClick);
-    }
   }
 
   handleClick = () => {
@@ -80,162 +40,38 @@ class App extends React.Component {
       this.setState({visible: false})
     }
   }
-  onMouseEnterHandler() {
+  onMouseEnterHandler = () => {
     this.setState({hover: true});
     console.log('enter');
   }
-  onMouseLeaveHandler() {
+  onMouseLeaveHandler = () => {
     this.setState({hover: false});
     console.log('leave');
   }
-  handleContextRef = contextRef => this.setState({ contextRef })
-  toggleVisibility() {
-
-    this.setState({
-
-      visible: !this.state.visible
-    });
-
-    if (this.state.menuIcon == 'ellipsis vertical icon') {
-      this.setState({menuIcon: 'remove'})
-    } else {
-      this.setState({menuIcon: 'ellipsis vertical icon'})
-    }
-
-    console.log('clicked');
-  }
+  
+  
 
   render() {
-    const { contextRef } = this.state
-    const {visible} = this.state
-    const style = {
-      //height: '100vh',
-      sidebar: {
-       // width: '30px',
-        //height: '100vh',
-        //position: 'fixed',
-        //top: '0px',
-        //right: '-1px',
-        background: '#333'
-      }
-    }
-
-
-    const stylez = {
-      layout: {display: "flex", flex: 1, minHeight: "100vh", flexDirection: "column", backgroundColor: '#E5E5E5'}
-  }
   
     return (
-      
-      <Router>
-        <div>
+        <Router>
+          <div> 
+            <Navigation>
 
-         
+              <Switch>
+                <Route exact path="/" component={Home}/>
+                <Route path="/bio" component={Bio}/>
+                <Route path="/projects" component={Projects}/>
+                <Route path="/resume" component={Resume}/>
+                <Route path="/hire" component={Hire}/>
+                <Route component={NotFound}/>
+              </Switch>
+            
+              <Footer/>
+            </Navigation>
 
-          <Button className='main-menu' onClick={this.toggleVisibility}><Icon name={this.state.menuIcon}/></Button>
-          
-          <Sidebar.Pushable as={Segment} style={this.state.style}  ref={this.handleContextRef}>
-          
-          
-
-                  <header >
-
-                    <Container>
-                      <Grid.Row>
-                        <Grid.Column>
-                          <Menu as={Link} to="/">
-                            <h1>VSVS</h1>
-                          </Menu>
-                        </Grid.Column>
-                      </Grid.Row>
-                    </Container>
-
-                  </header>
-              
-                  <Sidebar
-                    as={Menu}
-                    //onMouseLeave={this.toggleVisibility}
-                    animation='slide along'
-                    direction='right'
-                    width='thin'
-                    visible={visible}
-                    icon='labeled'
-                    vertical
-                    inverted
-                    style={stylez.layout}
-                    >
-                    
-                      <div context={contextRef} pushing>
-                          <Menu.Item as={Link} to='/' name='home'><Icon name='home'/>Home</Menu.Item>
-                          <Menu.Item as={Link} to='/bio' name='bio'><Icon name='user circle'/>Bio</Menu.Item>
-                          <Menu.Item as={Link} to='/projects' name='projects'><Icon name='grid layout'/>Projects</Menu.Item>
-                          <Menu.Item as={Link} to='/resume' name='resume'><Icon name='file text outline'/>Resume</Menu.Item>
-                          <Menu.Item as={Link} to='/hire' name='hire'><Icon name='thumbs outline up'/>Hire Me</Menu.Item>
-                      </div>
-                    
-                  </Sidebar>
-
-                  <Sidebar.Pusher>
-
-                <Switch>
-                  <Route exact path="/" component={Home}/>
-                  <Route path="/bio" component={Bio}/>
-                  <Route path="/projects" component={Projects}/>
-                  <Route path="/resume" component={Resume}/>
-                  <Route path="/hire" component={Hire}/>
-                  <Route component={NotFound}/>
-                </Switch>
-               
-                <footer >
-
-                  <Container>
-                    <Grid>
-                      <Grid.Row centered columns={3}>
-                        <Grid.Column width={2} mobile='3'>
-                        <a href="https://github.com/VSVS">
-                          <Segment>
-                            
-                              <Icon name="github" size="huge"></Icon>
-                            
-                          </Segment>
-                          </a>
-                        </Grid.Column>
-                        <Grid.Column width={2} mobile='3'>
-                        <a href='https://linkedin.com/in/robertvargas'>
-                          <Segment>
-                            
-                              <Icon name="linkedin square" size="huge"></Icon>
-                            
-                          </Segment>
-                          </a>
-
-                        </Grid.Column>
-                        <Grid.Column width={2} mobile='3'>
-                      <Link to='/hire' name='hire'>
-                          <Segment >
-                            
-                              <Icon name="mail outline" size="huge"></Icon>
-                            
-                          </Segment>
-                      </Link>
-                        </Grid.Column>
-                      </Grid.Row>
-
-                      <Grid.Row centered columns={1}>
-                        <Grid.Column><h1>&copy; VargasVisuals.com 2018</h1></Grid.Column>
-                      </Grid.Row>
-
-                    </Grid>
-                  </Container>
-
-                </footer>
-              
-            </Sidebar.Pusher>
-          </Sidebar.Pushable>
-          <div id="edge" style={style.sidebar} onMouseOver={this.toggleVisibility}></div>
-
-        </div>
-      </Router>
+          </div>
+        </Router>
     )
   }
 }

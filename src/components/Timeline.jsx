@@ -30,7 +30,7 @@ class TimeLine extends React.Component{
               </Grid.Column>
               <Grid.Column mobile="13" computer="13">
                 <h2>Graduation</h2>
-                <p>I graduated from a small design school called Wood Tobe Coburn where i finished at the top of my class with an Associstaes degree in Graphic Design and was offered multiple positions from the job placement program.</p>
+                <p>I graduated from a small design school called Wood Tobe Coburn where i finished at the top of my class with an Associates degree in Graphic Design and was offered multiple positions from the job placement program.</p>
               </Grid.Column>
             </Grid.Row>
 
@@ -50,7 +50,7 @@ class TimeLine extends React.Component{
               <div className='string-wrapper'>
                 <h2>Hired as Print Designer at Duggal</h2>
                 <p>This was my first job after graduation and the beginning of my 
-                    professional career. During my time at duggal i learned advanced
+                    professional career. During my time at Duggal i learned advanced
                     photo retouching and color matching techniques. I operated wide
                     format print machines (16ft) as well as prepping files for production and vector files for laser cutting machines.</p>
               </div>
