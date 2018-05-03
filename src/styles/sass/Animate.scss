@@ -145,7 +145,7 @@
         opacity: 0;
     }
     100% {
-        fill: #333;
+        fill: #348AC7;
         transform: translateY(-100px);
         opacity: 0;
     }
@@ -163,10 +163,10 @@
     position: absolute;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: flash 2.5s ease-in-out 0.2s;
-    stroke: #fff;
-    fill: #fff;
+    fill: #348AC7;
+
 }
+
 
 @keyframes flash {
     0% {
@@ -176,26 +176,26 @@
         transform: translateY(20px);
     }
     10% {
-        fill: rgba(0, 0, 0, 1);
+        fill: #348AC7;
     }
     20% {
         fill: rgba(0, 0, 0, 0.2);
     }
     30% {}
     40% {
-        fill: rgba(0, 0, 0, 1);
+        fill: #348AC7;
     }
     50% {
         fill: rgba(0, 0, 0, 0.2);
     }
     60% {
-        fill: rgba(0, 0, 0, 1);
+        fill: #348AC7;
     }
     70% {
         fill: rgba(0, 0, 0, 0.2);
     }
     80% {
-        fill: rgba(0, 0, 0, 1);
+        fill: #348AC7;
     }
     90% {
         fill: rgba(0, 0, 0, 0.9);

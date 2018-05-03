@@ -14,7 +14,6 @@ import {
   Container,
   Grid
 } from 'semantic-ui-react'
-import headerProjects from '../imgs/project.png'
 
 
 import JS from '../imgs/projects/jsharks/slide1.png'
@@ -24,6 +23,10 @@ import CW from '../imgs/projects/cw/slide1.png'
 import lp1 from '../imgs/drone.png'
 import lp2 from '../imgs/wheel.png'
 import lp3 from '../imgs/jetblue.png'
+
+import Devices from '../imgs/devices.png'
+import Circuit from '../imgs/circuit.png'
+import CircuitBlue from '../imgs/circuit-blue.png'
 
 import graphicOne from '../imgs/graphic-design/glass-card.jpg'
 import graphicTwo from '../imgs/graphic-design/anime-portriat.jpg'
@@ -37,7 +40,6 @@ import graphicNine from '../imgs/graphic-design/mls-app.jpg'
 
 
 
-
 class Projects extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0)
@@ -46,12 +48,11 @@ class Projects extends React.Component {
 
     const {match} = this.props
     const style = {
-      header:{
-        backgroundImage: `url(${headerProjects})`,
-        backgroundSize:'cover',
-        //backgroundPosition:'',
-        backgroundRepeat:'no-repeat',
-        height:'350px'
+      header: {
+        backgroundImage:`url(${Circuit})`,
+        backgroundSize:'575px',
+        backgroundPosition:'-40% -10%',
+        backgroundRepeat: 'no-repeat'
       }
     }
 
@@ -65,144 +66,71 @@ class Projects extends React.Component {
           
         <div>
           <div style={style.header} id="projects-header" className="title">
-          <div>
-            <h1>Projects</h1>
-          </div>
+         
+            <img src={Devices} /><h1>Projects</h1>
+       
         </div>
 
-          <div className='web'>
-          <Container className="animated fadeInDown">
-            {/* 3 Across */}
-            <Grid stackable>
-            <Grid.Row columns='1'>
-                <Grid.Column textAlign='left'>
-                  <h1 className='heading'><Icon name='desktop'></Icon> Web Design</h1>
-                </Grid.Column>
-              </Grid.Row>
-              <Grid.Row columns={3}>
-                <Grid.Column>
+          <div className='web animated fadeInDown'>
+          <Grid stackable>
+            <Grid.Row columns={2}>
+              <Grid.Column className="js">
                   <Menu.Item as={Link} to={`${match.url}/jobsharks`} name='jobsharks'>
-                    <Grid className="project">
+
                       <Grid.Row columns="1" centered>
-                        <Grid.Column >
+                        <Grid.Column>
                           <Image fluid src={JS} />
                         </Grid.Column>
-                        <Grid.Column textAlign='centered'>
-                          <h1>JobSharks</h1>
-                          <p>Job Search</p>
-                        </Grid.Column>
                       </Grid.Row>
-                    </Grid>
+                    
                   </Menu.Item>
                 </Grid.Column>
-                <Grid.Column>
+                <Grid.Column className="project-explore js" textAlign='centered'>
+                  <h1>JobSharks</h1>
+                  <Button as={Link} to={`${match.url}/jobsharks`}>Explore</Button>
+                 
+                </Grid.Column>
+              </Grid.Row>
+
+              <Grid.Row columns={2} reversed="computer">
+              <Grid.Column className="gb">
                   <Menu.Item as={Link} to={`${match.url}/grindbeast`} name='grindbeast'>
-                    <Grid className="project">
-                      <Grid.Row columns="1" centered >
+
+                      <Grid.Row columns="1" centered>
                         <Grid.Column>
-                          <Image fluid src={GB}/>
-                        </Grid.Column>
-                        <Grid.Column textAlign='centered'>
-                          <h1>GrindBeast</h1>
-                          <p>Fitness Apparel</p>
+                          <Image fluid src={GB} />
                         </Grid.Column>
                       </Grid.Row>
-                    </Grid>
+                    
                   </Menu.Item>
                 </Grid.Column>
-                <Grid.Column>
+                <Grid.Column className="project-explore gb" textAlign='centered'>
+                  <h1>Grindbeast</h1>
+                  <Button as={Link} to={`${match.url}/grindbeast`}>Explore</Button>
+                </Grid.Column>
+              </Grid.Row>
+
+              <Grid.Row columns={2}>
+              <Grid.Column className="cw">
                   <Menu.Item as={Link} to={`${match.url}/codewear`} name='codewear'>
-                    <Grid className="project">
+
                       <Grid.Row columns="1" centered>
                         <Grid.Column>
-                          <Image fluid src={CW}/>
-                        </Grid.Column>
-                        <Grid.Column textAlign='centered'>
-                          <h1>CodeWear</h1>
-                          <p>
-                            Tech Tees
-                          </p>
+                          <Image fluid src={CW} />
                         </Grid.Column>
                       </Grid.Row>
-                    </Grid>
+                    
                   </Menu.Item>
                 </Grid.Column>
+                <Grid.Column className="project-explore cw" textAlign='centered'>
+                  <h1>CodeWear</h1>
+                  <Button as={Link} to={`${match.url}/codewear`}>Explore</Button>
+                </Grid.Column>
               </Grid.Row>
-            </Grid>
-            </Container>
-            </div>
 
-             {/* 3 Across */}
-             <div className='lps'>
-             <Container>
-             <Grid stackable>
-              <Grid.Row columns='1'>
-                <Grid.Column textAlign='left'>
-                  <h1 className='heading'><Icon name='mouse pointer'></Icon>Landing Pages</h1>
-                </Grid.Column>
-              </Grid.Row>
-              <Grid.Row columns={3}>
-                <Grid.Column>
-                  <a href='https://demo.vargasvisuals.com/drone' name='drone'>
-                    <Grid className="project">
-                      <Grid.Row columns="1" centered>
-                        <Grid.Column >
-                          <Image fluid src={lp1} />
-                        </Grid.Column>
-                        <Grid.Column textAlign='centered'>
-                          <h1>Drone</h1>
-                          <p>DJI Phantom</p>
-                        </Grid.Column>
-                      </Grid.Row>
-                    </Grid>
-                  </a>
-                </Grid.Column>
-                <Grid.Column>
-                  <a href='https://demo.vargasvisuals.com/wheel' name='wheel'>
-                    <Grid className="project">
-                      <Grid.Row columns="1" centered >
-                        <Grid.Column>
-                          <Image fluid src={lp2}/>
-                        </Grid.Column>
-                        <Grid.Column textAlign='centered'>
-                          <h1>Spin The Wheel</h1>
-                          <p>Gift Card</p>
-                        </Grid.Column>
-                      </Grid.Row>
-                    </Grid>
-                  </a>
-                </Grid.Column>
-                <Grid.Column>
-                <a href='https://demo.vargasvisuals.com/jetblue' name='JetBlue'>
-                    <Grid className="project">
-                      <Grid.Row columns="1" centered>
-                        <Grid.Column>
-                          <Image fluid src={lp3}/>
-                        </Grid.Column>
-                        <Grid.Column textAlign='centered'>
-                          <h1>Jet Blue</h1>
-                          <p>Travel Giveaway</p>
-                        </Grid.Column>
-                      </Grid.Row>
-                    </Grid>
-                  </a>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-            </Container>
-            </div>
+              
 
-
-          
-          <Grid stackable id='graphics'>
-            <Container >
-              <Grid.Row>
-                <Grid.Column>
-                  <h1 className='heading'><Icon name='paint brush'></Icon>Graphic Design</h1>  
-                </Grid.Column>
-              </Grid.Row>
-              </Container>
-            <Grid.Row columns='3'>
+<Grid.Row columns='3'>
               <Grid.Column>
                 <Image src={graphicOne} />
               </Grid.Column>
@@ -231,6 +159,69 @@ class Projects extends React.Component {
                 <Image src={graphicNine} />
               </Grid.Column>
             </Grid.Row>
+
+
+
+
+
+
+
+              <Grid.Row columns={3}>
+                 <Grid.Column>
+                  <a href='https://demo.vargasvisuals.com/drone' name='drone'>
+                    <Grid className="project">
+                      <Grid.Row columns="1" centered>
+                        <Grid.Column >
+                          <Image fluid src={lp1} />
+                        </Grid.Column>
+                        <Grid.Column textAlign='centered'>
+                          <h1>Drone</h1>
+                          
+                        </Grid.Column>
+                      </Grid.Row>
+                    </Grid>
+                  </a>
+                </Grid.Column>
+                <Grid.Column>
+                  <a href='https://demo.vargasvisuals.com/wheel' name='wheel'>
+                    <Grid className="project">
+                      <Grid.Row columns="1" centered >
+                        <Grid.Column>
+                          <Image fluid src={lp2}/>
+                        </Grid.Column>
+                        <Grid.Column textAlign='centered'>
+                          <h1>Spin The Wheel</h1>
+                          
+                        </Grid.Column>
+                      </Grid.Row>
+                    </Grid>
+                  </a>
+                </Grid.Column>
+                <Grid.Column>
+                  <a href='https://demo.vargasvisuals.com/jetblue' name='JetBlue'>
+                    <Grid className="project">
+                      <Grid.Row columns="1" centered>
+                        <Grid.Column>
+                          <Image fluid src={lp3}/>
+                        </Grid.Column>
+                        <Grid.Column textAlign='centered'>
+                          <h1>Jet Blue</h1>
+                         
+                        </Grid.Column>
+                      </Grid.Row>
+                    </Grid>
+                  </a>
+                </Grid.Column>
+              </Grid.Row>
+         </Grid>
+            </div>
+
+
+
+          
+          <Grid stackable id='graphics'>
+           
+            
          
           </Grid>
           </div>

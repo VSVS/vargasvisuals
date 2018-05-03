@@ -33,7 +33,7 @@ class Footer extends Component {
                       <Link to='/hire' name='hire'>
                           <Segment >
                             
-                              <Icon name="mail outline" size="huge"></Icon>
+                              <Icon name="mail" size="huge"></Icon>
                             
                           </Segment>
                       </Link>

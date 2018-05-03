@@ -19,7 +19,7 @@ import qs from 'qs'
 import profilePic from '../imgs/profile-pic.png'
 import geometric from '../imgs/geometric.png'
 
-const MessageExamplePositive = (props) => (
+const MessagePositive = (props) => (
   <Message className='animated fadeInDown' positive hidden={props.hideNotification}>
     <Message.Header><h1>Thanks!</h1></Message.Header>
     <p>I've received your <b>message</b> and will get back to you asap.</p>
@@ -113,9 +113,15 @@ class ContactForm extends React.Component {
         borderRadius:'100%',
         borderBottom:'6px solid #1f4071',
         borderRight:'6px solid #1f4071',
-        overFlow:'visible'
+        overFlow:'visible',
+        width:'200px',
+        opacity:'.75',
+        marginRight:'70px',
+        marginTop:'30px',
+        marginBottom:'10px'
         
-      }
+      },
+      
     }
     const options = [
       {
@@ -134,18 +140,20 @@ class ContactForm extends React.Component {
     ]
     const {full_name, email, company, position, message} = this.state
     return (
-      
-      <Grid className='hire'>
+      <div className='hire'>
+      <Grid >
       <Container>
         <Grid.Row>
           <Grid.Column>
-            <MessageExamplePositive hideNotification={this.state.hideNotification}/>
+            <MessagePositive hideNotification={this.state.hideNotification}/>
           </Grid.Column>
         </Grid.Row>
       </Container>
         
-        <Grid.Row columns="2" stackable>
-          <Grid.Column only='computer'>
+        <Grid.Row columns="2" centered stackable>
+          <Grid.Column width={6} computer='6' mobile='16'>
+            
+            <div><h1>Book an appointment with me by sharing your project details <Icon name="comment"/></h1></div>
             <Image style={style.pic} floated='right' src={profilePic}/>
           </Grid.Column>
           <Grid.Column width="6" computer="5" mobile="16">
@@ -211,6 +219,7 @@ class ContactForm extends React.Component {
         </Grid.Row>
 
       </Grid>
+      </div>
     )
   }
 
