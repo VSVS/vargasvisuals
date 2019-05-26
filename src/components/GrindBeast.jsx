@@ -1,9 +1,7 @@
 import React, {Component} from 'react'
-import Gallery from 'react-photo-gallery'
 import Slider from 'react-slick'
-import {Grid, Image, Container, Menu, Icon, Button} from 'semantic-ui-react'
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
-import Projects from './Projects'
+import {Grid, Image, Container, Icon, Button} from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 import Slide1 from '../imgs/projects/gb/slide1.png'
 import Slide2 from '../imgs/projects/gb/slide2.png'
@@ -18,16 +16,12 @@ import responsive from '../imgs/projects/gb/responsive.jpg';
 import fullPage from '../imgs/projects/gb/fullpage.jpg'
 
 
-
-
-
-class CodeWear extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
+class CodeWear extends Component {
     componentDidMount() {
         window.scrollTo(0, 0);
+    }
+    componentWillUnmount() {
+        window.scrollTo(0, 0)
     }
 
     render() {
@@ -39,13 +33,10 @@ class CodeWear extends React.Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             centerMode: false,
-            infinite: true,
             responsive: [
                 {
                     breakpoint: 470,
-                    settings: {
-                        // adaptiveHeight:true
-                    }
+                    settings: {}
                 }
             ]
         };
@@ -110,18 +101,14 @@ class CodeWear extends React.Component {
                                     <Slider {...settings}>
                                         <div>
                                             <Image src={Slide1}/>
-
                                         </div>
                                         <div>
-
                                             <Image src={Slide2}/>
-
                                         </div>
                                         <div>
                                             <Image src={Slide3}/>
                                         </div>
                                     </Slider>
-
                                 </div>
                             </Grid.Column>
                         </Grid.Row>
@@ -135,13 +122,10 @@ class CodeWear extends React.Component {
                         d="M1920 0v141.4s-579.3 160.8-960 0c-492.1-207.9-960 0-960 0V0h1920z"/>
                 </svg>
 
-                {/* Soemthing */}
-
                 <Container>
                     <Grid stackable>
                         
                         <Grid.Row columns='3' className='project-details-wrapper' >
-                            
                             <Grid.Column>
                                 <h2><Icon name="question circle" size="large"></Icon>Problem</h2>
                                 <p className="project-details">I wanted to build something with <b>Shopify</b> after seeing former collegeaus find success on this platform. This would allow me to expand my services, experience and create a profiltable website as a bonus.</p>
@@ -181,17 +165,17 @@ class CodeWear extends React.Component {
                         <img src={productTwo} alt="High Selling Product"/>
                         </Grid.Column>
                     </Grid.Row>
-                    <Grid.Row className="project-nav-title" columns='1' centered  padded>
-                        <Grid.Column textAlign='centered'>
-                            <h2><Icon name="grid layout" size="medium"></Icon >More Projects</h2>
+                    <Grid.Row className="project-nav-title" columns='1' centered>
+                        <Grid.Column textAlign='center'>
+                            <h2><Link to="/projects"><Icon name="grid layout" size="small"></Icon >More Projects</Link></h2>
                         </Grid.Column>
                     </Grid.Row>
-                    <Grid.Row columns='2' className='project-nav' stackable>
+                    <Grid.Row columns='2' className='project-nav'>
                         <Grid.Column textAlign='right'>
-                           <Button as={Link} to='/projects/codewear' ><Icon name="arrow circle outline left" size="large"></Icon>CodeWear</Button>
+                            <Button as={Link} to='/projects/codewear' ><Icon name="arrow circle outline left" size="large"></Icon>CodeWear</Button>
                         </Grid.Column>
                         <Grid.Column textAlign='left'>
-                           <Button as={Link} to='/projects/jobsharks'>JobSharks<Icon name="arrow circle outline right" size="large"></Icon></Button>
+                            <Button as={Link} to='/projects/jobsharks'>JobSharks<Icon name="arrow circle outline right" size="large"></Icon></Button>
                         </Grid.Column>
                     </Grid.Row>    
                 </Grid>

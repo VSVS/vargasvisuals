@@ -1,38 +1,18 @@
 import React from 'react'
-import {Grid, Container, Button, Icon, Image, Tab} from 'semantic-ui-react'
+import {Grid, Container, Button, Icon } from 'semantic-ui-react'
 import { Github } from 'react-social-github'
-import Slider from 'react-slick'
-
-
-
 
 class Resume extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
   }
   render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      responsive:[
-          {
-              breakpoint:470,
-              settings:{
-                  
-              }
-          }
-      ]
-  }
-
 
     return (
       <div>
 
         <Container className='resume-wrapper'>
-          <Grid stackable='true' >
+          <Grid stackable>
             <h1>Resume</h1>
             <Grid.Row columns='2' centered>
               <Grid.Column computer='5' tablet='7'>
@@ -42,7 +22,12 @@ class Resume extends React.Component {
                 <div className="resume">
                 
                   <div className="experience">
-                    
+
+                    <div>
+                      <h2>Iterative Capital Management - NY, NY</h2>
+                      <h5>Senior Front End Developer</h5>
+                      <p>Since joining Iterative Capital in 2018 i have transitioned into a senior position with more responsibilities. Some of the tasks include building and managing AWS infrastructure for hosting web applications, developing ReactJs based applications, improving the company's news site and building out funnels for readers and investors.</p>
+                    </div> 
                     <div>
                       <h2>Flex Marketing Group - NY, NY</h2>
                       <h5>Lead Designer / Developer</h5>
@@ -86,7 +71,7 @@ class Resume extends React.Component {
           <Grid.Row centered columns='1'>
             <div className="download-resume">
               <Grid.Column width='8'>
-                <a href='https://adobe.ly/2lO0Z7o'><Button color='orange' size='large'><Icon name='download'></Icon>Download Resume</Button></a>
+                <a href='https://adobe.ly/2Ew52PW'><Button color='orange' size='large'><Icon name='download'></Icon>Download Extended Resume</Button></a>
               </Grid.Column>
             </div>
           </Grid.Row>
@@ -95,7 +80,6 @@ class Resume extends React.Component {
       </div>
     )
   }
-
 }
 
 export default Resume;

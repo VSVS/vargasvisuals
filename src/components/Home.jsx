@@ -1,16 +1,13 @@
 import React, {Component} from 'react'
 import {
   Container,
-  Tab,
   Grid,
-  Menu,
   Button,
   Image,
   Icon
 } from 'semantic-ui-react'
-import Hire from './Hire'
 import WorkStation from './WorkStation'
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 import swoosh from '../imgs/swoosh.png'
@@ -18,34 +15,25 @@ import profile from '../imgs/profile2.jpg'
 
 
 class Home extends Component {
-
   componentDidMount() {
-    const path = this.path;
-    const length = path.getTotalLength();
-    console.log(length);
     window.scrollTo(0, 0)
   }
 
   render() {
-    const style = {
-      border: "solid 3px blue"
-    }
 
     return (
-
       <div>
-
         <div className="hero" style={{backgroundImage: `url(${swoosh})` }}>
           <Container>
-            <Grid columns="2" stackable="true">
+            <Grid columns="2" stackable>
               <Grid.Column>
                 <h5>Robert Vargas</h5>
 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 248">
                   <text
                     transform="translate(20.922 -198.13)"
-                    font-family="Montserrat-Bold"
-                    font-size="225.213">
+                    fontFamily="Montserrat-Bold"
+                    fontSize="225.213">
                     UX Developer
                   </text>
                   <path
@@ -62,9 +50,7 @@ class Home extends Component {
               </Grid.Column>
 
               <Grid.Column>
-
                 <WorkStation/>
-
               </Grid.Column>
 
             </Grid>
@@ -88,7 +74,7 @@ class Home extends Component {
           <Container>
             <Grid centered stackable>
 
-              <Grid.Row colums={1}>
+              <Grid.Row columns={1}>
                 <Grid.Column computer='10' mobile='16'>
                   <Image className='profile' src={profile} />
                 </Grid.Column>
@@ -106,7 +92,6 @@ class Home extends Component {
             </Grid>
           </Container>
         </div>
-  
 
       </div>
 

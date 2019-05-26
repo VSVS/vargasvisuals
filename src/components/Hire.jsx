@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import HireForm from './Contactform';
 
 
-const Hire = (props) => (
+const Hire = () => (
   <div>
-   <HireForm />
-
+    <HireForm />
   </div>
 )
-
 
 export default Hire;

@@ -41,7 +41,7 @@ class Footer extends Component {
                       </Grid.Row>
 
                       <Grid.Row centered columns={1}>
-                        <Grid.Column><h1>&copy; VargasVisuals.com 2018</h1></Grid.Column>
+                        <Grid.Column><h1>&copy; VargasVisuals.com 2019</h1></Grid.Column>
                       </Grid.Row>
 
                     </Grid>

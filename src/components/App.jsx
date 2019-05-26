@@ -7,29 +7,10 @@ import Projects from './Projects'
 import NotFound from './NotFound'
 import Navigation from './Navigation';
 import Footer from './Footer';
-import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
-import {
-  Sidebar,
-  Segment,
-  Button,
-  Menu,
-  Image,
-  Icon,
-  Header,
-  Container,
-  Grid,
-  List,
-  Sticky,
-  Rail
-} from 'semantic-ui-react'
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-
-  }
-
   handleClick = () => {
     if (this.state.visible) {
       this.setState({visible: false});
@@ -48,11 +29,9 @@ class App extends React.Component {
     this.setState({hover: false});
     console.log('leave');
   }
-  
-  
 
   render() {
-  
+
     return (
         <Router>
           <div> 

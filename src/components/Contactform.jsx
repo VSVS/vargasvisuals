@@ -2,7 +2,6 @@ import React from 'react'
 import {
   Button,
   Form,
-  Segment,
   Grid,
   Container,
   Icon,
@@ -11,13 +10,12 @@ import {
   Message
 } from 'semantic-ui-react'
 import ReCAPTCHA from 'react-google-recaptcha'
-import GoogleKey from '../GoogleKey'
 import axios from 'axios'
 import classnames from 'classnames'
 import qs from 'qs'
 
 import profilePic from '../imgs/profile-pic.png'
-import geometric from '../imgs/geometric.png'
+const GoogleKey = '6LeRDDIUAAAAADumMmP17GHsfwYAAy4KFpzLSvNq'
 
 const MessagePositive = (props) => (
   <Message className='animated fadeInDown' positive hidden={props.hideNotification}>
@@ -39,7 +37,6 @@ class ContactForm extends React.Component {
       full_name: '',
       email: '',
       company: '',
-      //position: '',
       message: ''
 
     }
@@ -123,22 +120,8 @@ class ContactForm extends React.Component {
       },
       
     }
-    const options = [
-      {
-        value: 'Temporary',
-        text: 'Temp'
-      }, {
-        value: 'Freelance',
-        text: 'Freelance'
-      }, {
-        value: 'Part Time',
-        text: 'Part time'
-      }, {
-        value: 'Full Time',
-        text: 'Full time'
-      }
-    ]
-    const {full_name, email, company, position, message} = this.state
+
+    const {full_name, email, company, message} = this.state
     return (
       <div className='hire'>
       <Grid >
@@ -150,7 +133,7 @@ class ContactForm extends React.Component {
         </Grid.Row>
       </Container>
         
-        <Grid.Row columns="2" centered stackable>
+        <Grid.Row columns="2" centered>
           <Grid.Column width={6} computer='6' mobile='16'>
             
             <div><h1>Book an appointment with me by sharing your project details <Icon name="comment"/></h1></div>
@@ -211,7 +194,6 @@ class ContactForm extends React.Component {
               <ReCAPTCHA
                 sitekey={GoogleKey}
                 ref='recaptcha'
-                render="explicit"
                 onChange={this.verifyCallback}/>
 
             </Form>

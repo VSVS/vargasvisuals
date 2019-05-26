@@ -1,9 +1,7 @@
 import React, {Component} from 'react'
-import Gallery from 'react-photo-gallery'
 import Slider from 'react-slick'
-import {Grid, Image, Container, Menu, Icon, Button} from 'semantic-ui-react'
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
-import Projects from './Projects'
+import {Grid, Image, Container, Icon, Button} from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 import Slide1 from '../imgs/projects/cw/slide1.png'
 import Slide2 from '../imgs/projects/cw/slide2.png'
@@ -19,13 +17,12 @@ import noPlace from '../imgs/projects/cw/no-place-like-home.jpg';
 
 
 
-class CodeWear extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
+class CodeWear extends Component {
     componentDidMount() {
         window.scrollTo(0, 0);
+    }
+    componentWillUnmount() {
+        window.scrollTo(0, 0)
     }
 
     render() {
@@ -37,15 +34,12 @@ class CodeWear extends React.Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             centerMode: false,
-            infinite: true,
             prevArrow: document.querySelector('.prev'),
             nextArrow:document.querySelector('.next'),
             responsive: [
                 {
                     breakpoint: 470,
-                    settings: {
-                        // adaptiveHeight:true
-                    }
+                    settings: {}
                 }
             ]
         };
@@ -135,8 +129,6 @@ class CodeWear extends React.Component {
                         d="M1920 0v141.4s-579.3 160.8-960 0c-492.1-207.9-960 0-960 0V0h1920z"/>
                 </svg>
 
-                {/* Soemthing */}
-
                 <Container>
                     <Grid stackable>
                         
@@ -181,17 +173,17 @@ class CodeWear extends React.Component {
                             <img src={allWeb} alt="all web sizes"/>
                         </Grid.Column>
                     </Grid.Row>
-                    <Grid.Row className="project-nav-title" columns='1' centered  padded>
-                        <Grid.Column textAlign='centered'>
-                            <h2><Icon name="grid layout" size="medium"></Icon >More Projects</h2>
+                    <Grid.Row className="project-nav-title" columns='1' centered>
+                        <Grid.Column textAlign='center'>
+                            <h2><Link to="/projects"><Icon name="grid layout" size="small"></Icon >More Projects</Link></h2>
                         </Grid.Column>
                     </Grid.Row>
-                    <Grid.Row columns='2' className='project-nav' stackable>
+                    <Grid.Row columns='2' className='project-nav'>
                         <Grid.Column textAlign='right'>
-                           <Button as={Link} to='/projects/JobSharks' ><Icon name="arrow circle outline left" size="large"></Icon>JobSharks</Button>
+                            <Button as={Link} to='/projects/JobSharks' ><Icon name="arrow circle outline left" size="large"></Icon>JobSharks</Button>
                         </Grid.Column>
                         <Grid.Column textAlign='left'>
-                           <Button as={Link} to='/projects/grindbeast'>GrindBeast<Icon name="arrow circle outline right" size="large"></Icon></Button>
+                            <Button as={Link} to='/projects/grindbeast'>GrindBeast<Icon name="arrow circle outline right" size="large"></Icon></Button>
                         </Grid.Column>
                     </Grid.Row>    
                 </Grid>

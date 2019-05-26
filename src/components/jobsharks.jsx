@@ -1,35 +1,27 @@
 import React, {Component} from 'react'
-import Gallery from 'react-photo-gallery'
 import Slider from 'react-slick'
-import {Grid, Image, Container, Menu, Icon, Button} from 'semantic-ui-react'
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
-import Projects from './Projects'
+import {Grid, Image, Container, Icon, Button} from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 import Slide1 from '../imgs/projects/jsharks/slide1.png'
 import Slide2 from '../imgs/projects/jsharks/slide2.png'
 import Slide3 from '../imgs/projects/jsharks/slide3.jpg'
 
-import logo from '../imgs/projects/jsharks/jobsharks-blue.png';
-import headerBack from '../imgs/projects/jsharks/header-jsharks.jpg';
-import allWeb from '../imgs/projects/jsharks/all-web.jpg';
-import search from '../imgs/projects/jsharks/search.jpg';
-import branding from '../imgs/projects/jsharks/branding.jpg';
-import signUp from '../imgs/projects/jsharks/sign-up.jpg';
-import stacked from '../imgs/projects/jsharks/stacked.jpg';
+import logo from '../imgs/projects/jsharks/jobsharks-blue.png'
+import headerBack from '../imgs/projects/jsharks/header-jsharks.jpg'
+import allWeb from '../imgs/projects/jsharks/all-web.jpg'
+import search from '../imgs/projects/jsharks/search.jpg'
+import branding from '../imgs/projects/jsharks/branding.jpg'
+import signUp from '../imgs/projects/jsharks/sign-up.jpg'
+import stacked from '../imgs/projects/jsharks/stacked.jpg'
 
 
-
-
-
-
-
-class CodeWear extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
+class CodeWear extends Component {
     componentDidMount() {
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 0)
+    }
+    componentWillUnmount() {
+        window.scrollTo(0, 0)
     }
 
     render() {
@@ -41,18 +33,15 @@ class CodeWear extends React.Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             centerMode: false,
-            infinite: true,
             prevArrow: document.querySelector('.prev'),
             nextArrow:document.querySelector('.next'),
             responsive: [
                 {
                     breakpoint: 470,
-                    settings: {
-                        // adaptiveHeight:true
-                    }
+                    settings: {}
                 }
             ]
-        };
+        }
 
         this.props = {
             title: 'JobSharks',
@@ -79,7 +68,7 @@ class CodeWear extends React.Component {
                 <div className='project-header' style={style.header}>
                 <Container>
                     {/* Header */}
-                    <Grid padded className='project-intro' stackable >
+                    <Grid padded className='project-intro' stackable>
                         
                         <Grid.Row columns='2' centered >
                             <Grid.Column computer='7' mobile='2' >
@@ -141,13 +130,9 @@ class CodeWear extends React.Component {
                         d="M1920 0v141.4s-579.3 160.8-960 0c-492.1-207.9-960 0-960 0V0h1920z"/>
                 </svg>
 
-                {/* Soemthing */}
-
                 <Container>
                     <Grid stackable>
-                        
-                        <Grid.Row columns='3' className='project-details-wrapper' >
-                            
+                        <Grid.Row columns='3' className='project-details-wrapper'>                            
                             <Grid.Column>
                                 <h2><Icon name="question circle" size="large"></Icon>Problem</h2>
                                 <p className="project-details">I was assigned a project to create a job site to improve internal email marketing efforts and diversify promotions. Since there are an abundance of career search sites, I chose to create a simple application utilizing existing platforms.</p>
@@ -161,7 +146,6 @@ class CodeWear extends React.Component {
                                 <p className="project-details">To improve on this I would strip away wordpress and build this as a Laravel application. I'd utilize the Laravel ecosystem including the login system and easy database migrations to deliver to a ReactJs powered front end client. One core feature would be the ability to save and track applications for several job sites.</p>
                             </Grid.Column>
                         </Grid.Row>
-                        
                     </Grid>
                 </Container>
 
@@ -187,25 +171,23 @@ class CodeWear extends React.Component {
                             <img src={branding} alt="Branding"/>
                         </Grid.Column>
                     </Grid.Row>
-                    <Grid.Row className="project-nav-title" columns='1' centered  padded>
-                        <Grid.Column textAlign='centered'>
-                            <h2><Icon name="grid layout" size="medium"></Icon >More Projects</h2>
+                    <Grid.Row className="project-nav-title" columns='1' centered>
+                        <Grid.Column textAlign='center'>
+                            <h2><Link to="/projects"><Icon name="grid layout" size="small"></Icon >More Projects</Link></h2>
                         </Grid.Column>
                     </Grid.Row>
-                    <Grid.Row columns='2' className='project-nav' stackable>
+                    <Grid.Row columns='2' className='project-nav'>
                         <Grid.Column textAlign='right'>
-                           <Button as={Link} to='/projects/grindbeast' ><Icon name="arrow circle outline left" size="large"></Icon>GrindBeast</Button>
+                            <Button as={Link} to='/projects/grindbeast' ><Icon name="arrow circle outline left" size="large"></Icon>GrindBeast</Button>
                         </Grid.Column>
                         <Grid.Column textAlign='left'>
-                           <Button as={Link} to='/projects/codewear'>CodeWear<Icon name="arrow circle outline right" size="large"></Icon></Button>
+                            <Button as={Link} to='/projects/codewear'>CodeWear<Icon name="arrow circle outline right" size="large"></Icon></Button>
                         </Grid.Column>
                     </Grid.Row>    
                 </Grid>
-                
             </div>
         )
     }
-
 }
 
 export default CodeWear

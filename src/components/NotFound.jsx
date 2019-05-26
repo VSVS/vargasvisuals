@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Grid, Container, Image} from 'semantic-ui-react'
+import { Grid, Container } from 'semantic-ui-react'
 
 class NotFound extends Component {
  

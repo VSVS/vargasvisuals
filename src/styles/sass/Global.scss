@@ -1,6 +1,11 @@
 
 body{
-    
+    @font-face {
+        font-family: Proxima;
+        //src: url(http://www.font-face.com/fonts/delicious/Delicious-Roman.otf);
+        src: url(fonts/$Proxima-Nova-font);
+        font-weight:400;
+    }
     .heading{
         font-family: 'Montserrat'
     }
@@ -86,7 +91,9 @@ body{
         margin-right: -20px;
     }
     p{
-        font-family: $Proxima-Nova-font;
+        //font-family: $Proxima-Nova-font;
+        font-family: Nunito, sans-serif;
+        color: #737373;
         font-size: 21px;
     }
     a.item.link {

@@ -1,38 +1,26 @@
 import React, { Component } from 'react'
 import TimeLine from './Timeline'
-import { Grid, Container, Tab, Menu, Button, Icon, Image} from 'semantic-ui-react'
+import { Grid, Container, Button, Icon} from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 
-import headerBio from '../imgs/bio-header.jpg'
-
-
-class Bio extends React.Component{
-  constructor(props){
-    super(props);
-   
-  }
+class Bio extends Component{
   componentDidMount(){
     window.scrollTo(0, 0);
     
   }
   render(){
-    const style = {
-      header:{
-        backgroundImage: `url(${headerBio})`,
-        backgroundSize:'cover',
-        backgroundRepeat:'no-repeat',
-        height:'350px'
-      }
-    }
     
     return(
         <div>
-          <div style={style.header} id="bio-header" className="title">
+          <Container className='resume-wrapper'>
+            <Grid stackable>
               <div>
                 <h1>Bio</h1>
               </div>
-            </div>
+            </Grid>
+          </Container>
+        
           
 
           <div id="bio" className="animated fadeInDown">
