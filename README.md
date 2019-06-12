@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +67,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+![vargasviasuals.com screenshot](https://image.ibb.co/jpy8Ob/vargasvisuals_com.png"VargasVisuals.com")
+<a href="http://Vargasvisuals.com">Vargasvisuals.com</a>
+>>>>>>> 0d9eaaff371c98644e6bc9608ece294f84efedb9
