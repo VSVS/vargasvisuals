@@ -1,0 +1,23 @@
+body .resume-wrapper {
+  background: #fff;
+  padding: 50px; }
+  body .resume-wrapper .resume {
+    width: 100%; }
+  body .resume-wrapper .experience div {
+    margin-top: -10px;
+    font-size: 18px; }
+    body .resume-wrapper .experience div h5 {
+      margin: -11px 0px 10px;
+      font-size: 18px;
+      color: #03a9f4; }
+    body .resume-wrapper .experience div p {
+      font-size: 16px;
+      margin-bottom: 30px; }
+
+body .download-resume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333;
+  width: 100%;
+  height: 300px; }

@@ -1,0 +1,216 @@
+#Arm_x5F_mouse {
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  transform-origin: center; }
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate3d(0deg); }
+  30% {
+    -webkit-transform: rotate(-7deg); }
+  70% {
+    -webkit-transform: rotate(3deg); }
+  100% {
+    -webkit-transform: rotate(0deg); } }
+
+#left-arm {
+  animation-name: type;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-origin: center; }
+
+@keyframes type {
+  0% {
+    -webkit-transform: rotate3d(0deg); }
+  30% {
+    -webkit-transform: rotate(10deg); }
+  70% {
+    -webkit-transform: rotate(-3deg); }
+  100% {
+    -webkit-transform: rotate(0deg); } }
+
+#vapor1,
+#vapor2,
+#vapor3 {
+  animation-name: vape;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; }
+
+@keyframes vape {
+  0% {
+    transform: translateY(0px);
+    opacity: 1; }
+  33% {
+    transform: translateY(1px); }
+  50% {
+    opacity: .25; }
+  66% {
+    transform: translateY(1px); }
+  100% {
+    transform: translateY(0px);
+    opacity: 1; } }
+
+#blinkers polygon {
+  animation-name: blink;
+  animation-duration: 5s;
+  animation-iteration-count: infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+#ms-rect,
+#ms-circ,
+#ms-bl,
+#ms-br,
+#ms-rect-thin,
+#ms-cube-1,
+#ms-cube-2,
+#ms-cube-3 {
+  stroke-dasharray: 479.79;
+  stroke-dashoffset: 479.79;
+  stroke: #333;
+  fill: #fff;
+  animation: dash 5s infinite; }
+
+#ms-rect {
+  animation-delay: .5s; }
+
+#ms-rect-thin {
+  animation-delay: 1s;
+  stroke-dasharray: 397.5258483886719; }
+
+#ms-cube-1 {
+  animation-delay: 1.5s; }
+
+#ms-cube-2 {
+  animation-delay: 2s; }
+
+#ms-cube-3 {
+  animation-delay: 2.5s; }
+
+#ms-bl {
+  animation-delay: 3s; }
+
+#ms-circ {
+  animation-delay: 3.5s; }
+
+#ms-br {
+  animation-delay: 4s; }
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 479.79; }
+  75% {
+    stroke-dashoffset: 0;
+    opacity: 0; }
+  100% {
+    fill: #348AC7;
+    transform: translateY(-100px);
+    opacity: 0; } }
+
+.animate {
+  animation-duration: 1s; }
+
+.path-wrap {
+  position: relative; }
+
+.path {
+  position: absolute;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  fill: #348AC7; }
+
+@keyframes flash {
+  0% {
+    stroke-dashoffset: 1000;
+    fill: #348AC7;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px); }
+  10% {
+    fill: #348AC7; }
+  20% {
+    fill: rgba(0, 0, 0, 0.2); }
+  30% { }
+  40% {
+    fill: #348AC7; }
+  50% {
+    fill: rgba(0, 0, 0, 0.2); }
+  60% {
+    fill: #348AC7; }
+  70% {
+    fill: rgba(0, 0, 0, 0.2); }
+  80% {
+    fill: #348AC7; }
+  90% {
+    fill: rgba(0, 0, 0, 0.9); }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1; } }
+
+.animated {
+  animation-duration: .4s;
+  animation-fill-mode: both; }
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1); }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05); }
+  to {
+    transform: scale3d(1, 1, 1); } }
+
+.pulse {
+  animation-name: pulse; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+.fadeInUp {
+  animation-name: fadeInUp; }
+
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+    visibility: visible; }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+    visibility: visible; }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp; }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10%, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+.fadeInDown {
+  animation-name: fadeInDown; }

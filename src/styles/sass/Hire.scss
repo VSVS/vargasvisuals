@@ -1,7 +1,10 @@
 body{
     
     .hire{
-        background:rgb(12, 96, 199);
+        background: #2980B9;  
+        background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #268ee0); 
+        background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #268ee0); 
+
         padding-top:40px !important;
         padding-bottom:40px !important;
         @media(max-width:550px){

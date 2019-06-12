@@ -53,7 +53,7 @@ class ContactForm extends React.Component {
 
   verifyCallback() {
     axios
-      .get('https://vargasvisuals.com/process_form.php')
+      .get('http://vargasvisuals.com/process_form.php')
       .then(res => {
         if (res) {
           this.setState({recaptchaInstance: true})
@@ -76,7 +76,7 @@ class ContactForm extends React.Component {
     if (this.state.recaptchaInstance) {
       this.setState({loading: true})
       axios
-        .post('https://vargasvisuals.com/send_message.php', qs.stringify({
+        .post('http://vargasvisuals.com/send_message.php', qs.stringify({
         full_name: this.state.full_name,
         email: this.state.email,
         company: this.state.company,
@@ -148,7 +148,7 @@ class ContactForm extends React.Component {
               onSubmit={this
               .handleFormSubmission
               .bind(this)}
-              className={classnames({'loading': this.state.loading})}>
+              className={classnames({'loading': this.state.loading}) + 'animated slideInUp'}>
 
               <Form.Input
                 onChange={this.handleOnChange}

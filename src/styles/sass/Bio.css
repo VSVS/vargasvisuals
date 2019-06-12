@@ -1,0 +1,83 @@
+#bio-header {
+  background-position: center -200px; }
+  #bio-header.title {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  #bio-header h1 {
+    font-size: 46px;
+    color: #fff; }
+  @media (max-width: 470px) {
+    #bio-header {
+      background-position: center; } }
+
+#bio {
+  margin-top: 0px;
+  background: #fff; }
+  #bio > .ui.grid > div {
+    padding-bottom: 0px;
+    margin-bottom: 0px; }
+  #bio .timeline {
+    padding: 50px 10px; }
+    #bio .timeline h1 {
+      color: #89cbff; }
+    #bio .timeline .connection {
+      border-radius: 50%;
+      border: solid 7px #2196F3;
+      background: #2196F3;
+      width: 1rem;
+      height: 1rem;
+      display: inline-block;
+      position: relative;
+      top: -8px;
+      right: -28px; }
+    #bio .timeline .connection.end {
+      position: absolute;
+      top: calc(100% - -7px);
+      right: 23px; }
+    #bio .timeline .row {
+      margin-bottom: 0px; }
+      #bio .timeline .row p {
+        font-size: 16px; }
+    #bio .timeline .string-wrapper {
+      float: right;
+      display: block;
+      height: 100%;
+      position: relative; }
+      #bio .timeline .string-wrapper .string {
+        background: #2196F3;
+        position: absolute;
+        top: 56px;
+        left: 33px;
+        height: calc(100% - 40px);
+        width: 4px; }
+    #bio .timeline div.ui.column {
+      overflow: hidden; }
+    @media (max-width: 470px) {
+      #bio .timeline .three.wide.mobile.column {
+        padding-left: 0px;
+        padding-right: 0px; } }
+  #bio div.col.s3.m3 {
+    border-left: solid 5px;
+    height: 25vh; }
+  #bio div.col.s9.m9 h3 {
+    font-size: 24px; }
+  #bio svg .st0 {
+    fill: #727272; }
+  #bio svg .st1 {
+    fill: none;
+    stroke: #727272;
+    stroke-width: 7.7728;
+    stroke-miterlimit: 10; }
+  #bio p.month {
+    margin-bottom: -21px;
+    font-size: 17px;
+    color: #ccc;
+    margin-top: 20px; }
+  #bio .view-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333;
+    width: 100%;
+    height: 300px; }

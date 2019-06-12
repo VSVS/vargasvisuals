@@ -1,14 +1,15 @@
 {
-  "short_name": "Robert Vargas Portfolio",
-  "name": "Front end development and design",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
-      "sizes": "192x192",
-      "type": "image/png"
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": ".",
   "display": "standalone",
-  "theme_color": "#348AC7",
-  "background_color": "#7474BF"
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
